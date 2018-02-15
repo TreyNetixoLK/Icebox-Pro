@@ -26,8 +26,8 @@
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="chartjs.html">Domain Pricing</a></li>
-                        <li><a href="morris.html">Morris</a></li>
+                        <li><a href="#">Domain Pricing</a></li>
+                        <li><a href="#">Tutorials</a></li>
                       </ul>
                     </li>
                     <li class="ripple">

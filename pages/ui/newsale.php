@@ -12,7 +12,7 @@
                                         </div>
                                       </div>
                                       <div class="panel-body">
-                                      
+
                                    <form action="" method="post">
     <div class="col-xs-6">
  	<div class="form-group">
@@ -49,7 +49,7 @@
     <div class="col-xs-6">
      <div class="form-group">
       <label for="disabledTextInput">Email Address</label>
-      <input type="email" id="disabledTextInput" class="form-control" placeholder="example@domain.com" name="txtemail">
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="example@domain.com" name="txtemail">
     </div>
       <div class="form-group">
       <label for="disabledTextInput">Permanent Address</label>
@@ -73,17 +73,17 @@
       <label for="disabledSelect">Plan Name</label>
       <select class="form-control" name="plan">
         <option></option>
-    	<?php 
-		  
+    	<?php
+
 		  $sql4 =mysqli_query($connect,"select * from tbl_packages");
 		  while($row=mysqli_fetch_array($sql4))
 		  {
 		?>
-		<option><?php echo $row["pkg_name"] ?></option> 
-		  <?php 
-			  
+		<option><?php echo $row["pkg_name"] ?></option>
+		  <?php
+
 		  }
-		  
+
 		  ?>
       </select>
     </div>
@@ -100,10 +100,10 @@
     <button type="reset" class="btn btn-primary">Reset All Fields</button>
     </div>
 </form>
-                                          
-                                          
-                                          
-                                       
+
+
+
+
                                       </div>
                                     </div>
  </div>

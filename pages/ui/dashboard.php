@@ -70,14 +70,14 @@
                       </tbody>
                         </table>
                       </div>
-                                            
-                                           <!-- Table Ends here --> 
+
+                                           <!-- Table Ends here -->
                                         </div>
                                         <div class="calendar">
-                                          
+
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -108,7 +108,7 @@
                 <div class="progress-value">30%</div>
             </div>
         </div>
-     
+
                                        <!-- Speed Meter ends Here -->
 
                                         <hr/>
@@ -140,7 +140,7 @@
              <div class="col-md-6" style="margin-top:5px;">
                                    <button class="btn ripple-infinite btn-raised btn-primary">
                                     <div>
-                                      <span>Click Here to View More Details</span>
+                                      <span>View More Details</span>
                                     </div>
                                   </button>
                               </div>
@@ -148,7 +148,7 @@
           </div>
                                 <!-- Project Box ends here -->
                                 <div class="panel-footer bg-white border-none">
-                            
+
                                 </div>
                               </div>
                             </div>

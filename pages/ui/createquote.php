@@ -12,62 +12,50 @@
                                         </div>
                                       </div>
                                       <div class="panel-body">
-                                      
+
                                                        <div class="col-md-12">
-                        <form class="cmxform" id="signupForm" method="get" action="">
-                          <div class="col-md-6">
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" required>
-                              <span class="bar"></span>
-                              <label>Firstname</label>
-                            </div>
+                                                         <!-- IT Starts from Here -->
+                                                         <div align="center">
+                                                         <form class="form-inline" method="post">
+                                                         <input type="text" id="disabledTextInput" class="form-control" placeholder="Reference without the prefix 'N'" style="width: 300px;" name="txtsearch" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>"> &nbsp;<button type="submit" class="btn btn-primary" name="btn_Search">Search</button>
+                                                         	</form>
+                                                         </div>
+                                                         <br />
 
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_lastname" name="validate_lastname" required>
-                              <span class="bar"></span>
-                              <label>Lastname</label>
-                            </div>
+                                                         <div class="col-xs-6">
+                                                         <div class="form-group">
+                                                           <label for="disabledTextInput">Order Reference</label>
+                                                           <input type="text" id="disabledTextInput" class="form-control" placeholder="Sunshine Holdings" name="txtcompname">
+                                                         </div>
+                                                       </div>
+                                                       <div class="col-xs-6">
+                                                       <div class="form-group">
+                                                         <label for="disabledTextInput">Customer / Company Name</label>
+                                                         <input type="text" id="disabledTextInput" class="form-control" placeholder="Sunshine Holdings" name="txtcompname">
+                                                       </div>
+                                                     </div>
+                                                     <div class="col-xs-12">
+                                                     <div class="form-group">
+                                                       <label for="disabledTextInput">Requirement</label>
+                                                       <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="Please describe the customers requirement"></textarea>
+                                                         </div></div>
+                                                         <div class="col-xs-12">
+                                                         <div class="form-group">
+                                                           <label for="disabledTextInput">Requirement</label>
+                                                           <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="Please describe the customers requirement"></textarea>
+                                                             </div></div>
 
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_username" name="validate_username" required>
-                              <span class="bar"></span>
-                              <label>Username</label>
-                            </div>
-                          </div>
 
-                          <div class="col-md-6">
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="password" class="form-text" id="validate_password" name="validate_password" required>
-                              <span class="bar"></span>
-                              <label>Password</label>
-                            </div>
 
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="password" class="form-text" id="validate_confirm_password" name="validate_confirm_password" required>
-                              <span class="bar"></span>
-                              <label>Confirm Password</label>
-                            </div>
 
-                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                              <input type="text" class="form-text" id="validate_email" name="validate_email" required>
-                              <span class="bar"></span>
-                              <label>Email</label>
-                            </div>
-                          </div>                   
-                          <div class="col-md-12">
-                              <div class="form-group form-animate-checkbox">
-                                  <input type="checkbox" class="checkbox"  id="validate_agree" name="validate_agree">
-                                  <label>Please agree to our policy</label>
-                              </div>
-                              <input class="submit btn btn-danger" type="submit" value="Submit">
-                        </div>
-                      </form>
 
+
+                      <!-- IT ENDS HERE -->
                     </div>
-                                          
-                                          
-                                          
-                                       
+
+
+
+
                                       </div>
                                     </div>
  </div>
