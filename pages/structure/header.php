@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+
   <meta charset="utf-8">
   <meta name="description" content="Miminium Admin Template v.1">
   <meta name="author" content="Isna Nur Azis">
@@ -28,7 +28,7 @@
 
 
   <link href="asset/css/style.css" rel="stylesheet">
-  <!-- end: Css --> 
+  <!-- end: Css -->
   <link rel="shortcut icon" href="asset/img/logomi.png">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -46,7 +46,7 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a href="index.html" class="navbar-brand"> 
+                <a href="index.html" class="navbar-brand">
                  <b>ICEBOX</b>
                 </a>
 
@@ -54,12 +54,12 @@
                <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project Management <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="main.php?page=orderform">Search Project Details</a></li>
+                  <li><a href="main.php?page=search">Search Project Details</a></li>
                   <li><a href="#">Manager Project Details</a></li>
                   <li><a href="#">Pending Project List</a></li>
                 </ul>
               </li>
-            
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Network Management <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -68,7 +68,7 @@
                   <li><a href="#">Manage Capacity</a></li>
                 </ul>
               </li>
-                  
+
                <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration Management <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -79,7 +79,7 @@
                   <li><a href="#">Manage User Groups</a></li>
                 </ul>
               </li>
-                  
+
               </ul>
 
               <ul class="nav navbar-nav navbar-right user-nav">

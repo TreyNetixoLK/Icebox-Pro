@@ -6,9 +6,6 @@
                                           <h4 class="text-left">Generate Quotation</h4>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                                           <h4>
-                                           <span class="icon-user icons icon text-right"></span>
-                                           </h4>
                                         </div>
                                       </div>
                                       <div class="panel-body">
@@ -41,9 +38,16 @@
                                                          </div></div>
                                                          <div class="col-xs-12">
                                                          <div class="form-group">
-                                                           <label for="disabledTextInput">Requirement</label>
-                                                           <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="Please describe the customers requirement"></textarea>
-                                                             </div></div>
+                                                           <label for="disabledTextInput">Price</label>
+                                                           <input type="text" id="disabledTextInput" class="form-control" placeholder="3200.00" name="txtcompname">
+                                                             </div>
+                                                             <br />
+                                                             <div align="center">
+                                                             <button type="submit" class="btn btn-success" name="Btn_CreateSale">Generate Quote</button>
+                                                             <button type="reset" class="btn btn-primary">Reset All Fields</button>
+                                                             </div>
+
+                                                           </div>
 
 
 

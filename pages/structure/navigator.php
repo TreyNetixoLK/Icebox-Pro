@@ -16,7 +16,7 @@
                       </a>
                       <ul class="nav nav-list tree">
                         <li><a href="main.php?page=newsale">Create New Order</a></li>
-                        <li><a href="main.php?page=newsale">Search Order</a></li>
+                        <li><a href="main.php?page=search">Search Order</a></li>
                         <li><a href="main.php?page=createquote">Generate Quote</a></li>
                       </ul>
                     </li>

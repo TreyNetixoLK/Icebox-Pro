@@ -5,11 +5,6 @@
                                         <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
                                           <h4 class="text-left">Create New Order</h4>
                                         </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                                           <h4>
-                                           <span class="icon-user icons icon text-right"></span>
-                                           </h4>
-                                        </div>
                                       </div>
                                       <div class="panel-body">
 
@@ -22,7 +17,9 @@
         <option>Dynamic Web Site</option>
         <option>Static Web Site</option>
         <option>Mobile Application</option>
-        <option>Solution Development</option>
+        <option>Web Application</option>
+        <option>Windows Application</option>
+        <option>Telco Solution</option>
       </select>
     </div>
     <div class="form-group">
