@@ -1,3 +1,5 @@
+
+
   <div id="content">
                 <div class="col-md-12" style="padding:20px;">
                     <div class="col-md-12 padding-0">
@@ -97,16 +99,30 @@
                                        <!-- Speed Meter Goes Here -->
                           <div class="container" align="center">
     <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="progress blue">
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">30%</div>
-            </div>
+      <div class="col-md-3 col-sm-6">
+
+          <div class="c100 p55">
+              <span>55%</span>
+              <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+              </div>
+          </div>
+          <p>SERVER_NAME</P>
+          <p>Domain</P>
+          <p>55% Used</P>
+
+          <div class="c100 p0 green">
+              <span>0%</span>
+              <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+              </div>
+          </div>
+          <br /> <br />  <br />
+          <p>SERVER_NAME</P>
+          <p>Domain</P>
+          <p>0% Used</P>
         </div>
 
                                        <!-- Speed Meter ends Here -->
