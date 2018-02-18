@@ -55,7 +55,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project Management <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="main.php?page=search">Search Project Details</a></li>
-                  <li><a href="#">Manager Project Details</a></li>
+                  <li><a href="main.php?page=manageproject">Manager Project Details</a></li>
                   <li><a href="#">Pending Project List</a></li>
                 </ul>
               </li>
