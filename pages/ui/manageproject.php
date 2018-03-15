@@ -22,11 +22,11 @@
                                                          <div class="col-xs-6">
                                                          <div class="form-group">
                                                            <label for="disabledTextInput">Order Reference</label>
-                                                           <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname">
+                                                           <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname" readonly>
                                                          </div>
                                                          <div class="form-group">
                                                            <label for="disabledTextInput">Order Type</label>
-                                                           <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname">
+                                                           <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname" readonly>
                                                          </div>
                                                         <div class="form-group">
                                                         <label for="disabledTextInput">Comments</label>
@@ -48,128 +48,129 @@
                                                            <label for="disabledTextInput">Capacity Required</label>
                                                            <input type="text" id="disabledTextInput" class="form-control" placeholder="MB" name="txtcompname">
                                                          </div>
-                                                             
+
+                                                         <div class="form-group">
+                                                           <label for="disabledTextInput">Ordre Completion Date</label>
+                                                           <input type="date" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname">
+                                                         </div>
+
                                                        </div>
                                                        <div class="col-xs-6">
                                                        <div class="form-group">
                                                          <label for="disabledTextInput">Customer / Company Name</label>
-                                                         <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname">
+                                                         <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname" readonly>
                                                        </div>
-                                                        
+
                                                         <div class="panel panel-info">
                                                         <div class="panel-heading">
                                                         <h4 class="panel-title">Project Milestone</h4>
                                                         </div>
                                                         <div class="panel-body">
                                                         <div class="responsive-table">
-                                                        <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                                        <table class="" width="100%" cellspacing="0">
                                                         <tbody>
                                                         <tr>
                                                             <td>Order Appraisal</td>
-                                                            <td>                        
+                                                            <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done progress-current">
                                                             <label><small>Progressing</small></label>
                                                             </div></td>
-                                                            <td>                        
+                                                            <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done">
                                                             <label><small>Completed</small> </label>
                                                             </div></td>
-                                                         
+
                                                         </tr>
                                                         <tr>
                                                             <td>UI Design</td>
-                                                               <td>                        
+                                                               <td>
                                                             <div class="form-group form-animate-checkbox">
-                                                            <input type="checkbox" class="checkbox" value="progress-done progress-current">
+                                                            <input type="checkbox" class="checkbox" value="progress-done progress-current" >
                                                             <label><small>Progressing</small></label>
                                                             </div></td>
-                                                            <td>                        
+                                                            <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done">
                                                             <label><small>Completed</small> </label>
                                                             </div></td>
-                                                     
+
                                                         </tr>
                                                         <tr>
                                                             <td>Database Design</td>
-                                                        <td>                        
+                                                        <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done progress-current">
                                                             <label><small>Progressing</small></label>
                                                             </div></td>
-                                                            <td>                        
+                                                            <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done">
                                                             <label><small>Completed</small> </label>
                                                             </div></td>
-                                                       
+
                                                         </tr>
                                                         <tr>
                                                             <td>Development</td>
-                                                                          <td>                        
+                                                                          <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done progress-current">
                                                             <label><small>Progressing</small></label>
                                                             </div></td>
-                                                            <td>                        
+                                                            <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done">
                                                             <label><small>Completed</small> </label>
                                                             </div></td>
-                                                        
+
                                                         </tr>
                                                         <tr>
                                                             <td>Testing</td>
-                                                               <td>                        
+                                                               <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done progress-current">
                                                             <label><small>Progressing</small></label>
                                                             </div></td>
-                                                            <td>                        
+                                                            <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done">
                                                             <label><small>Completed</small> </label>
                                                             </div></td>
-                                                        
+
                                                         </tr>
                                                         <tr>
                                                             <td>Completion</td>
-                                                                   <td>                        
+                                                                   <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done progress-current">
                                                             <label><small>Progressing</small></label>
                                                             </div></td>
-                                                            <td>                        
+                                                            <td>
                                                             <div class="form-group form-animate-checkbox">
                                                             <input type="checkbox" class="checkbox" value="progress-done">
                                                             <label><small>Completed</small> </label>
                                                             </div></td>
-                                                       
+
                                                         </tr>
                                                         </tbody>
                                                         </table>
                                                         </div>
-                                                            
-                                                            
+
+
                                                         </div>
                                                         </div>
                                                         <!-- Add her e->
-                                                           
+
                                                      </div>
-
-
-
-
-
-
                       <!-- IT ENDS HERE -->
                     </div>
 
 
-
-
+<div align="center">
+<button type="submit" class="btn btn-success" name="btn_Update">Update Changes</button>&nbsp;&nbsp;
+<button type="reset" class="btn btn-info" name="btn_Update">Reset Fields</button>
+</div>
                                       </div>
                                     </div>
  </div>
