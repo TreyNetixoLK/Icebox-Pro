@@ -35,7 +35,7 @@
                     <ul>
                         <li><a href="main.php?page=serverstatus">Server Status</a></li>
                         <li><a href="main.php?page=manageservers">Manage Servers</a></li>
-                        <li><a href="https://status.lankahost.net/" target="_blank">Wholesale Network Status</a></li>
+                        <li><a href="main.php?page=whole_netstat">Wholesale Network Status</a></li>
                     </ul>
                 </li>
                 <li class="cm-submenu">
@@ -60,7 +60,7 @@
                     </ul>
                 </li>
             </ul>
-            
+
         </div>
     </div>
 </div>

@@ -27,7 +27,8 @@
                 <option>Telco Solution</option>
               </select> &nbsp; &nbsp;
               <label for="disabledTextInput">Value</label> &nbsp;
-              <input type="text" id="disabledTextInput" class="form-control" placeholder="Reference without the prefix 'N'" style="width: 300px;" name="txtsearch" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>"> &nbsp;<button type="submit" class="btn btn-primary" name="btn_Search">Search</button>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Reference without the prefix 'N'" style="width: 300px;" name="txtsearch" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>"> &nbsp;
+              <button type="submit" class="btn btn-primary" name="btn_Search">Search</button>
                </form>
               </div>
               <br />
