@@ -1,3 +1,4 @@
+<?php include ("app/appdata/connection.php"); ?>
 <style>
 /** Colors **/
 ol.progress-track {

@@ -1,3 +1,4 @@
+<? include ("app/appdata/connection.php"); ?>
 <?php
 
 $sql="SELECT COUNT(Status) FROM tbl_orders WHERE Status='Progressing'";
