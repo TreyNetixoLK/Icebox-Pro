@@ -89,7 +89,7 @@
                     <a href="main.php?page=changepw"><i class="fa fa-fw fa-key"></i> Change Password</a>
                 </li>
                 <li>
-                    <a href="login.html"><i class="fa fa-fw fa-sign-out"></i> Sign out</a>
+                    <a href="app/appdata/logout.php"><i class="fa fa-fw fa-sign-out"></i> Sign out</a>
                 </li>
             </ul>
         </div>

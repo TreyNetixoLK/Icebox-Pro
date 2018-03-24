@@ -2,5 +2,5 @@
  session_start();
 
   session_destroy();   // function that Destroys Session
-  header("Location:\Stock-Control-System\login.php");
+  header("Location:\Icebox-Pro\login.php");
   ?>
