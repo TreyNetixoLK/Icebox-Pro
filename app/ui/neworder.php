@@ -68,7 +68,7 @@ error_reporting(0);
 ?>
 <div class="form-group">
 <label for="disabledTextInput">Name of Authorised Contact</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="John Smith" name="txtauthcontact" value="<?php echo $fname."&nbsp;".$lname;?>">
+<input type="text" id="disabledTextInput" class="form-control" placeholder="John Smith" name="txtauthcontact" value="<?php echo $fname." ".$lname;?>">
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Permanent Address</label>
@@ -107,7 +107,7 @@ error_reporting(0);
   </select>
   </div>
   <div class="form-group">
-  <label for="disabledTextInput">Customer / Company Name</label>
+  <label for="disabledTextInput">Company Name</label>
   <input type="text" id="disabledTextInput" class="form-control" placeholder="Sunshine Holdings" name="txtcompname">
   </div>
   <div class="form-group">
@@ -116,11 +116,11 @@ error_reporting(0);
   </div>
 <div class="form-group">
 <label for="disabledTextInput">Domain Name</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="example.com" name="txtreqdomainname">
+<input type="text" id="disabledTextInput" class="form-control" placeholder="example.com" name="txtdomainname">
 </div>
 <div class="form-group">
 <label for="disabledSelect">Plan Name</label>
-<select class="form-control" name="plan">
+<select class="form-control" name="txtplan">
 <option></option>
 <?php
 
@@ -138,7 +138,7 @@ while($row=mysqli_fetch_array($sql4))
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Contract Term</label>
-<select id="disabledSelect" class="form-control" name="txtordtype">
+<select id="disabledSelect" class="form-control" name="txtcontractterm">
 <option></option>
 <option>12 Months</option>
 <option>24 Months</option>
@@ -148,7 +148,7 @@ while($row=mysqli_fetch_array($sql4))
 
 <div class="form-group">
 <label for="disabledTextInput">Account Manager</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtreqdomainname" value="<?php echo $fullname; ?>" readonly>
+<input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtaccountmanager" value="<?php echo $fullname; ?>" readonly>
 </div>
 </div>
 <div class="col-xs-12">
@@ -156,12 +156,48 @@ while($row=mysqli_fetch_array($sql4))
 <label for="disabledTextInput">Requirement</label>
 <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="Please describe the customers requirement"></textarea>
 </div>
-                   <hr/>
 <div align="center">
 <button type="submit" class="btn btn-success" name="btn_CreateSale">Create Order</button>
-<button type="reset" class="btn btn-primary">Reset All Fields</button>
 </div>
 </form>
+<br />
+<?php
+$ordert=$_POST['txtordtype'];
+$nic= $_POST['txtnicno'];
+$custname= $_POST['txtcompname'];
+$bregno= $_POST['txtbusregno'];
+$aucontact= $_POST['txtauthcontact'];
+$conactno =$_POST['txtcontactno'];
+$email=$_POST['txtemail'];
+$add1=$_POST['txtadd1'];
+$add2=$_POST['txtadd2'];
+$add3=$_POST['txtadd3'];
+$add4=$_POST['txtadd4'];
+$domain=$_POST['txtdomainname'];
+$planname=$_POST['txtplan'];
+$comments=$_POST['txtcomments'];
+$contract = $_POST['txtcontractterm'];
+$createdate = date('Y-m-d');
+$val = $_POST ['txtaccountmanager'];
+$Status ="Pending";
+$resu = "";
+$resu1="";
+
+if(isset ($_POST['btn_CreateSale']))
+{
+	$sql = "insert into tbl_orders(CustName,NIC_NO,BusinessReg,OrdType,SiteContact,address1,address2,address3,address4,contract_term,ContactNo,Email,DomainName,HostingPlan,Comments,Status,createdby,Ord_Rec_Date) values ('$custname','$nic','$bregno','$ordert','$aucontact','$add1','$add2','$add3','$add4','$contract','$conactno','$email','$domain','$planname','$comments','$Status','$val','$createdate')";
+
+if (mysqli_query($connect,$sql))
+	{
+		$resu = "<div class='alert alert-success' role='alert'>The Order has been created.</div>";
+		echo $resu;
+	}
+	else{
+		$resu = "<div class='alert alert-danger' role='alert'>".mysqli_error($connect)."</div>";
+		echo $resu;
+		}
+}
+?>
 </div>
             </div>
         </div>
