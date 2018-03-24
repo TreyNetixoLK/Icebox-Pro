@@ -7,6 +7,12 @@
 
         <div class="row cm-fix-height">
         </div>
+        <div class="panel panel-primary">
+
+            <div class="panel-body">
+
+            </div>
+        </div>
         <div class="panel panel-default">
 
             <div class="panel-body">
