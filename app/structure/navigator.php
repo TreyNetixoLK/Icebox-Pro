@@ -1,3 +1,4 @@
+<?php include('app/appdata/hunter.php')?>
 <nav class="cm-navbar cm-navbar-primary">
     <div class="cm-flex"><a href="index.html"><img src="assets/img/logo3_White.png" height="50px" width="100px"></a></div>
     <div class="btn btn-primary md-menu-white" data-toggle="cm-menu"></div>
@@ -82,7 +83,7 @@
             <button class="btn btn-primary md-account-circle-white" data-toggle="dropdown"></button>
             <ul class="dropdown-menu">
                 <li class="disabled text-center">
-                    <a style="cursor:default;"><strong>John Smith</strong></a>
+                    <a style="cursor:default;"><strong>Hi&nbsp;<?php echo $fullname; ?> !!</strong></a>
                 </li>
                 <li class="divider"></li>
                 <li>
