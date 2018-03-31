@@ -1,5 +1,4 @@
 <?php include ("app/appdata/connection.php"); ?>
-<?php include ("app/appdata/dompdf_ops.php"); ?>
  <?php
 // Turn off all error reporting
 error_reporting(0);
@@ -22,6 +21,17 @@ error_reporting(0);
 <div class="row">
 <div class="col-md-10">
 <img src="assets/img/logo3.png" alt="" height="65px" width="140px">
+<br><br>
+<p>Mr. Jax Silva</p>
+<p>Address Line 01</p>
+<p>Address Line 02</p>
+<p>Address Line 03</p>
+<p>Address Line 04</p>
+<p>Country</p>
+<br />
+<br>
+
+<p>Dear Samuel,</p>
 </div>
 </div>
 
