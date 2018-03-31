@@ -1,4 +1,50 @@
 <?php include ("app/appdata/connection.php"); ?>
+<?php
+// Turn off all error reporting
+error_reporting(0);
+
+$ordernumb = $_POST[txtordernumber];
+?>
+<?php
+$tbsql="SELECT * FROM tbl_orders where OrderID = '$ordernumb'";
+
+$records =mysqli_query($connect,$tbsql);
+while($package=mysqli_fetch_assoc($records))
+{
+
+$nic=$package["NIC_NO"];
+$ordtype = $package["OrdType"];
+$comapany =$package["CustName"];
+$orderReceived =$package["Ord_Rec_Date"];
+$ETA =$package["ETA"];
+$plan=$package["HostingPlan"];
+$cterm =$package["contract_term"];
+$pengineer =$package["ProjectEngineer"];
+$address1 = $package["address1"];
+$address2 = $package["address2"];
+$address3 = $package["address3"];
+$address4 = $package["address4"];
+$country =  $package["country"];
+$BReg =  $package["BusinessReg"];
+$Acontact=  $package["SiteContact"];
+$email= $package["Email"];
+$phone= $package["ContactNo"];
+$domain=$package["DomainName"];
+$AM =$package["Createdby"];
+$status=$package["Status"];
+$platform=$package["platform"];
+$Dspace=$package["DiskSpace"];
+$cpurl=$package["portalurl"];
+$DNS1=$package["DNSSID1"];
+$DNS2=$package["DNSSID2"];
+$MIP=$package["MIPAdd"];
+$server=$package["Server"];
+$Bandwith=$package["Bandwith"];
+
+
+} // end While loop
+
+?>
 <style>
 /** Colors **/
 ol.progress-track {
@@ -86,7 +132,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">#N<?php echo $ordernumb; ?>-<?php echo $comapany; ?> </h2>
     </div>
     <div class="container-fluid">
 
@@ -96,7 +142,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 
             <div class="panel-body">
 
-              <div class="col-md-12 text-center article-v1-title"><h1>Project Name</h1></div>
+              <div class="col-md-12 text-center article-v1-title"><h1>Project Milestone</h1></div>
               <div class="col-md-12  article-v1-body">
                 <br /><br />
               <!-- Progress Bar -->
@@ -194,15 +240,141 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
               <!-- end of Progress Bar -->
               <div class="col-md-12">
                 <!-- Order Information Section -->
-                <h3>Project Information</h3>
+                <h3><b>Project Information</b></h3>
                 <br />
-
+                <div class="table-responsive-sm">
+                <table class="table" border="0">
+                  <tr>
+                    <td><strong>Netixo Reference</strong></td>
+                    <td>N<?php echo $ordernumb; ?></td>
+                    <td><strong>Order Type</strong></td>
+                    <td><?php echo $ordtype; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Project Received on</strong></td>
+                    <td><?php echo $orderReceived; ?></td>
+                    <td><strong>Estimated Completion Date</strong></td>
+                    <td><?php echo $ETA; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Plan Name</strong></td>
+                    <td><?php echo $plan; ?></td>
+                    <td><strong>Contract Term</strong></td>
+                    <td><?php echo $cterm; ?></td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td><strong>Status</strong></td>
+                    <td><span class="badge badge-pill badge-success">Progressing</span></td>
+                    <td><strong>Project Engineer</strong></td>
+                    <td><?php echo $pengineer; ?></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4"></td>
+                  </tr>
+                </table>
+                </div>
+                <!-- end of Order Information -->
+              </div>
+              <br />
+              <div class="col-md-12">
+                <!-- Order Information Section -->
+                <h3><b>Customer Information</b></h3>
+                <br />
+                <div class="table-responsive-sm">
+                <table class="table" border="0">
+                  <tr>
+                    <td><strong>Company Name</strong></td>
+                    <td><?php echo $comapany; ?></td>
+                    <td><strong>Business Registration No.</strong></td>
+                    <td><?php echo $BReg; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Permanent Address</strong></td>
+                    <td><?php echo $address1; ?></td>
+                    <td><strong>Authorised Contact Person</strong></td>
+                    <td><?php echo $Acontact; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong></strong></td>
+                    <td><?php echo $address2; ?></td>
+                    <td><strong>Email Address</strong></td>
+                    <td><i><a href="emailto:<?php echo $email; ?>"><?php echo $email; ?></a></i></td>
+                  </tr>
+                  <tr>
+                    <td><strong></strong></td>
+                    <td><?php echo $address3; ?></td>
+                    <td><strong>Contact Number</strong></td>
+                    <td><a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></td>
+                  </tr>
+                  <tr>
+                    <td><strong></strong></td>
+                    <td><?php echo $address4; ?></td>
+                    <td><strong>Account Manager</strong></td>
+                    <td><?php echo $AM; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Country</strong></td>
+                    <td><?php echo $country; ?></td>
+                    <td><strong>Identification Number</strong></td>
+                    <td><?php echo $nic; ?></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4"></td>
+                  </tr>
+                </table>
+                </div>
                 <!-- end of Order Information -->
               </div>
 
+              <br />
+              <div class="col-md-12">
+                <!-- Order Information Section -->
+                <h3><b>Service Information</b></h3>
+                <br />
+                <div class="table-responsive-sm">
+                <table class="table" border="0">
+                  <tr>
+                    <td><strong>Domain Name</strong></td>
+                    <td><a href="https://<?php echo $domain; ?>" target="_blank"><?php echo $domain; ?></a></td>
+                    <td><strong>Server Name</strong></td>
+                    <td><?php echo $server; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Platform</strong></td>
+                    <td><?php echo $platform; ?></td>
+                    <td><strong>Main IP</strong></td>
+                    <td><?php echo $MIP; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Server Space</strong></td>
+                    <td><?php echo $Dspace; ?>&nbsp; MB</td>
+                    <td><strong>DNS Server ID [1]</strong></td>
+                    <td><?php echo $DNS1; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monthly Bandwith</strong></td>
+                    <td><?php echo $Bandwith; ?>&nbsp; MB</td>
+                    <td><strong>DNS Server ID [2]</strong></td>
+                    <td><?php echo $DNS2; ?></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Status</strong></td>
+                    <td><span class="badge badge-pill badge-success"><?php echo $status; ?></span></td>
+                    <td><strong>Control Panel</strong></td>
+                    <td><a href="https:<?php echo $cpurl; ?>" target="_blank"><?php echo $cpurl; ?></a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4"></td>
+                  </tr>
+                </table>
+                </div>
+                <!-- end of Order Information -->
+              </div>
+              <br/ >
               <div class="col-md-12">
                 <!-- Order Notes Section -->
-                <h3>History</h3>
+                <h3><b>Project History</b></h3>
                 <br />
                 <div class="responsive-table">
 <table class="table table-striped table-bordered" width="100%" cellspacing="0">

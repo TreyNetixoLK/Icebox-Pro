@@ -55,6 +55,7 @@ error_reporting(0);
                   echo      "      <th>Plan Name</th>";
                   echo      "      <th>Account Manager</th>";
                   echo      "      <th>Status</th>";
+                  echo      "      <th>Action</th>";
                   echo      "      </tr>";
                   echo      "      </thead>";
                   echo      "      <tbody>";
@@ -65,6 +66,10 @@ error_reporting(0);
                     echo "<td>".$package["HostingPlan"]."</td>";
                     echo "<td>".$package["Createdby"]."</td>";
                     echo "<td>".$package["Status"]."</td>";
+                    echo "<td align='center'><form method='post' action='main.php?page=orders'>
+                    <input type='hidden' id='disabledTextInput' value=".$package['OrderID']." class='form-control' name='txtordernumber' readonly>
+                    <button type='submit' class='btn btn-default' name='btn_view'>View Order</button>
+                    </form></td>";
                     echo "</tr>";
                     echo      "      </tbody>";
                     echo      "      </table>";

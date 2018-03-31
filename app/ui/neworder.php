@@ -91,8 +91,16 @@ error_reporting(0);
 <label for="disabledTextInput">Contact Number</label>
 <input type="text" id="disabledTextInput" class="form-control" placeholder="Contact Number with country code for oversease clients" name="txtcontactno" value="<?php echo $contact; ?>">
 </div>
+<div class="form-group">
+<label for="disabledTextInput">Country</label>
+<input type="text" id="disabledTextInput" class="form-control" placeholder="Sri Lanka" name="txtcountry" value="<?php echo $country; ?>">
+</div>
 </div>
 <div class="col-xs-6">
+  <div class="form-group">
+  <label for="disabledTextInput"></label>
+  <br /><br /><br />
+  </div>
   <div class="form-group">
   <label for="disabledSelect">Order Type</label>
   <select id="disabledSelect" class="form-control" name="txtordtype">
@@ -178,6 +186,7 @@ $planname=$_POST['txtplan'];
 $comments=$_POST['txtcomments'];
 $contract = $_POST['txtcontractterm'];
 $createdate = date('Y-m-d');
+$country= $_POST['txtcountry'];
 $val = $_POST ['txtaccountmanager'];
 $Status ="Pending";
 $resu = "";
@@ -185,7 +194,7 @@ $resu1="";
 
 if(isset ($_POST['btn_CreateSale']))
 {
-	$sql = "insert into tbl_orders(CustName,NIC_NO,BusinessReg,OrdType,SiteContact,address1,address2,address3,address4,contract_term,ContactNo,Email,DomainName,HostingPlan,Comments,Status,createdby,Ord_Rec_Date) values ('$custname','$nic','$bregno','$ordert','$aucontact','$add1','$add2','$add3','$add4','$contract','$conactno','$email','$domain','$planname','$comments','$Status','$val','$createdate')";
+	$sql = "insert into tbl_orders(CustName,NIC_NO,BusinessReg,OrdType,SiteContact,address1,address2,address3,address4,contract_term,ContactNo,Email,DomainName,HostingPlan,Comments,Status,createdby,Ord_Rec_Date,country) values ('$custname','$nic','$bregno','$ordert','$aucontact','$add1','$add2','$add3','$add4','$contract','$conactno','$email','$domain','$planname','$comments','$Status','$val','$createdate','$country')";
 
 if (mysqli_query($connect,$sql))
 	{
