@@ -44,9 +44,11 @@ error_reporting(0);
 				 $breg =$row[3];
 				 $ordtype =$row[4];
 				 $Scontact =$row[5];
-				  $padd =$row[6];
-				  $contact =$row[7];
-				  $email =$row[8];
+				  $add1 =$row[6];
+				  $add2 =$row[7];
+				  $add3 =$row[8];
+          $add4 =$row[9];
+          $country =$row[10];
 				  $domain =$row[14];
 				  $hosting =$row[10];
 				  $bandwith =$row[11];
@@ -99,15 +101,20 @@ error_reporting(0);
           <div class="col-xs-12">
           <div class="form-group">
             <label for="disabledTextInput">Requirement</label>
-            <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="Please describe the customers requirement" name="description"></textarea>
+            <textarea class="form-control" rows="3" data-length="800" placeholder="Please describe the customers requirement" name="description"></textarea>
               </div></div>
               <div class="col-xs-12">
               <div class="form-group">
                 <label for="disabledTextInput">Price</label>
                 <input type="text" id="disabledTextInput" class="form-control" placeholder="3200.00" name="price">
                   </div>
-                  <input type="text" class="form-control" name="domain" value="<?php echo $domain; ?>" id="exampleFormControlInput1">
-                  <input type="text" class="form-control" name="type" value="<?php echo $ordtype; ?>" id="exampleFormControlInput1">
+                  <input type="hidden" class="form-control" name="domain" value="<?php echo $domain; ?>" id="exampleFormControlInput1">
+                  <input type="hidden" class="form-control" name="type" value="<?php echo $ordtype; ?>" id="exampleFormControlInput1">
+                  <input type="hidden" class="form-control" name="scontact" value="<?php echo $Scontact; ?>" id="exampleFormControlInput1">
+                    <input type="hidden" class="form-control" name="address1" value="<?php echo $add1;?>,&nbsp;<?php echo $add2; ?>" id="exampleFormControlInput1">
+                      <input type="hidden" class="form-control" name="address3" value="<?php echo $add3; ?>" id="exampleFormControlInput1">
+                        <input type="hidden" class="form-control" name="address4" value="<?php echo $add4; ?>" id="exampleFormControlInput1">
+                          <input type="hidden" class="form-control" name="country" value="<?php echo $country; ?>" id="exampleFormControlInput1">
                   <br />
                   <div align="center">
                   <button type="submit" class="btn btn-success" name="btn_generate">Generate Quote</button>
