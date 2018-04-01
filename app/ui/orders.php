@@ -5,6 +5,7 @@ error_reporting(0);
 
 $ordernumb = $_POST[txtordernumber];
 ?>
+
 <?php
 $tbsql="SELECT * FROM tbl_orders where OrderID = '$ordernumb'";
 
@@ -41,6 +42,12 @@ $MIP=$package["MIPAdd"];
 $server=$package["Server"];
 $Bandwith=$package["Bandwith"];
 
+$appraisal = $package["appraisal"];
+$ui = $package["ui_design"];
+$db = $package["db_design"];
+$devop = $package["development"];
+$testing = $package["testing"];
+$completion = $package["completion"];
 
 } // end While loop
 
@@ -148,7 +155,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
               <!-- Progress Bar -->
 
               <ol class="progress-track">
-<li class="progress-done">
+<li class="<?php echo $appraisal; ?>">
 <center>
 <div class="icon-wrap">
   <svg class="icon-state icon-check-mark">
@@ -163,7 +170,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 </center>
 </li>
 
-<li class="progress-done progress-current">
+<li class="<?php echo $ui; ?>">
 <center>
 <div class="icon-wrap">
   <svg class="icon-state icon-check-mark">
@@ -178,7 +185,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 </center>
 </li>
 
-<li class="progress-todo">
+<li class="<?php echo $db; ?>">
 <center>
 <div class="icon-wrap">
   <svg class="icon-state icon-check-mark">
@@ -193,7 +200,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 </center>
 </li>
 
-<li class="progress-todo">
+<li class="<?php echo $devop; ?>">
 <center>
 <div class="icon-wrap">
   <svg class="icon-state icon-check-mark">
@@ -207,7 +214,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 <span class="progress-text">Development</span>
 </center>
 </li>
-<li class="progress-todo">
+<li class="<?php echo $testing; ?>">
 <center>
 <div class="icon-wrap">
   <svg class="icon-state icon-check-mark">
@@ -221,7 +228,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 <span class="progress-text">Testing</span>
 </center>
 </li>
-<li class="progress-todo">
+<li class="<?php echo $completion; ?>">
 <center>
 <div class="icon-wrap">
   <svg class="icon-state icon-check-mark">
@@ -265,7 +272,35 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
                   <tr>
                   <tr>
                     <td><strong>Status</strong></td>
-                    <td><span class="badge badge-pill badge-success">Progressing</span></td>
+                    <td>
+                      <?php
+              $act = 'Completed';
+            $pending = 'Pending';
+              $prog = 'Progressing';
+              $hold = 'On Hold';
+
+          if ($status == $act)
+          {
+            echo "<h4><span class='label label-success'>".$status."</span></h4>";
+          }
+            else if ($status == $pending)
+          {
+            echo "<h4><span class='label label-default'>".$status."</span></h4>";
+          }
+          else if ($status == $prog)
+          {
+            echo "<h4><span class='label label-primary'>".$status."</span></h4>";
+          }
+          else if ($status == $hold)
+          {
+            echo "<h4><span class='label label-warning'>".$status."</span></h4>";
+          }
+          else
+          {
+            echo "<h4><span class='label label-danger'>".$status."</span></h4>";
+          }
+          ?>
+                    </td>
                     <td><strong>Project Engineer</strong></td>
                     <td><?php echo $pengineer; ?></td>
                   </tr>

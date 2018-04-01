@@ -45,6 +45,34 @@ error_reporting(0); ?>
     <button type="reset" class="btn btn-primary">Reset Fields</button>
     </div>
 </form>
+<br />
+<?php
+
+$Nref= $_POST['txtnref'];
+$pengineer= $_POST['projeng'];
+$eta = $_POST['txtdate'];
+$status= "Progressing";
+$server= $_POST['servname'];
+$hostspace = $_POST['txtallochost'];
+$bandwith = $_POST['txtallocband'];
+$val = $_SESSION ['user'];
+$resu = "";
+$resu1="";
+
+if(isset ($_POST['btn_Save']))
+{
+	$sql32 = "UPDATE tbl_orders SET ProjectEngineer ='".$pengineer."', Status ='".$status."', ETA ='".$eta."' where OrderID=".$Nref;
+    if (mysqli_query($connect,$sql32))
+	{
+			$resu = "<div class='alert alert-success' role='alert'>This order have been assigned to an Engineer.</div>";
+		    echo $resu;
+	}
+	else{
+		$resu ="<div class='alert alert-success' role='alert'>".mysqli_error($connect)."</div>";
+		echo $resu;
+		}
+}
+?>
 </div>
 <div class="col-md-8">
 <h3 align="center"> All  Pending Orders</h3>
