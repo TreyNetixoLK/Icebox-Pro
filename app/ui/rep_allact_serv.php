@@ -10,7 +10,7 @@
         <div class="panel panel-default">
 
             <div class="panel-body">
-
+              <?php include ("app/appdata/general.php"); ?>
               <h1 align="center">Configuration Reprot</h1>
 <br />
 <div class="row">

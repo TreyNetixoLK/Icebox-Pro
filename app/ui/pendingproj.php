@@ -12,6 +12,7 @@ error_reporting(0); ?>
         <div class="panel panel-default">
 
             <div class="panel-body">
+              <?php include ("app/appdata/general.php"); ?>
               <div class="col-md-4">
               <form action="" method="post">
  	<div class="form-group">

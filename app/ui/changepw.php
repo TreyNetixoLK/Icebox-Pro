@@ -1,7 +1,7 @@
 <?php include ("app/appdata/connection.php"); ?>
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">Change Password</h2>
     </div>
     <div class="container-fluid">
 

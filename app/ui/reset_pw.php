@@ -1,7 +1,7 @@
 <?php include ("app/appdata/connection.php"); ?>
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">Reset Password</h2>
     </div>
     <div class="container-fluid">
 
@@ -10,7 +10,7 @@
         <div class="panel panel-default">
 
             <div class="panel-body">
-
+              <?php include ("app/appdata/general.php"); ?>
               <div class="col-md-1"></div>
   <div class="col-md-10">
 

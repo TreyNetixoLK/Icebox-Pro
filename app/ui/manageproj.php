@@ -15,7 +15,7 @@ error_reporting(0);
         <div class="panel panel-default">
 
             <div class="panel-body">
-
+              <?php include ("app/appdata/general.php"); ?>
               <!-- IT Starts from Here -->
               <div align="center">
               <form class="form-inline" method="post">
