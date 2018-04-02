@@ -3,6 +3,48 @@
 // Turn off all error reporting
 error_reporting(0);
 ?>
+<?php
+
+
+ if(isset($_POST['btn_search']))
+ {
+    $search =$_POST['txtsearch'];
+    $sql="SELECT * FROM tbl_orders WHERE OrderID=".$search;
+
+    if($result=mysqli_query($connect,$sql))
+    {
+
+      if(mysqli_num_rows($result)>0)
+      {
+       while($row=mysqli_fetch_array($result))
+       {
+        $name=$row[1];
+         $hostingspace = $row[19];
+         $bandwith = $row[18];
+         $email = $row[22];
+         $mainip = $row[28];
+         $cpanelun = $row[20];
+         $cpanelpw = $row[21];
+         $cpanelurl = $row[25];
+         $DDNS1 = $row[26];
+         $DDNS2 = $row[27];
+         $Platform =$row[17];
+       }
+      }
+     else
+      {
+       $msg="<h3 style=color:red;>Not Found!</h3>";
+
+      }
+
+    }
+    else
+    {
+     $msg ="<h3 style=color:red;>".mysqli_error($connect) ."</h3>";
+
+    }
+ }
+ ?>
 <div id="global">
     <div class="container-fluid cm-container-white">
         <h2 style="margin-top:0;">Manage Services</h2>
@@ -18,7 +60,8 @@ error_reporting(0);
               <div align="center">
               <form class="form-inline" method="post" action="">
          <div class="form-group">
-<input type="text" id="disabledTextInput" class="form-control" placeholder="Reference without the prefix 'N'" style="width: 250px;" name ="txtsearch" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>"> &nbsp;<button type="submit" class="btn btn-primary" name="btn_search">Search</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="disabledTextInput" class="form-control" placeholder="Reference without the prefix 'N'" style="width: 250px;" name ="txtsearch" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>"> &nbsp;
+<button type="submit" class="btn btn-primary" name="btn_search">Search</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          </div>
 
         <div class="form-group">
@@ -29,48 +72,7 @@ error_reporting(0);
          </div>
  </form>
  <br />
- <?php
-
-
- 	if(isset($_POST['btn_search']))
- 	{
- 	   $search =$_POST['txtsearch'];
- 	   $sql="SELECT * FROM tbl_orders WHERE OrderID=".$search;
-
- 	   if($result=mysqli_query($connect,$sql))
- 	   {
-
- 		   if(mysqli_num_rows($result)>0)
- 		   {
- 			  while($row=mysqli_fetch_array($result))
- 			  {
- 				 $name=$row[1];
-          $hostingspace = $row[19];
-          $bandwith = $row[18];
-          $email = $row[22];
-          $mainip = $row[28];
-          $cpanelun = $row[20];
-          $cpanelpw = $row[21];
-          $cpanelurl = $row[25];
-          $DDNS1 = $row[26];
-          $DDNS2 = $row[27];
-          $Platform =$row[17];
- 			  }
- 		   }
- 		  else
- 		   {
- 			  $msg="<h3 style=color:red;>Not Found!</h3>";
- 			  echo $msg;
- 		   }
-
- 	   }
- 	   else
- 	   {
- 		  $msg ="<h3 style=color:red;>".mysqli_error($connect) ."</h3>";
- 		  echo $msg;
- 	   }
- 	}
- 	?>
+<?php  echo $msg; ?>
 </div>
 
        <br /><br /><br />

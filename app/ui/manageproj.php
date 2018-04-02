@@ -95,40 +95,8 @@ error_reporting(0);
               </select>
               </div>
 
-              <div class="panel panel-primary">
-                  <div class="panel-body">
-                    <form action="" method="post">
-                       <input type="hidden" id="disabledTextInput" class="form-control" name="txtref" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>">
-                       <label for="disabledTextInput">Add Comment</label>
-                        <textarea class="form-control" rows="3" name="txtcomment"></textarea><br />
-                        <div align="center">
-                        <button type="submit" class="btn btn-primary" name="btn_addNote" >Save Comment</button></div>
-                        </form>
-                        <?php include ("app/appdata/connection.php"); ?>
-                        <?php
-                        $notes = $_POST ['txtcomment'];
-                        $val = $_SESSION ['user'];
-                        $Ref = $_POST['txtref'];
-
-                        if(isset ($_POST['btn_addNote']))
-                        {
-                        $sql3 = "insert into tbl_ordernotes(Nref,Username,comments) values ('$Ref','$val','$notes')";
-
-                        if (mysqli_query($connect,$sql3))
-                        {
-
-                        }
-                        else{
-                        $resu = mysqli_error($connect);
-                        echo $resu;
-                        }
-                        }
-                        ?>
-
-                    </div>
-                  </div>
-
-            </div>
+              </div>
+    
             <div class="col-xs-6">
             <div class="form-group">
               <label for="disabledTextInput">Customer / Company Name</label>
@@ -313,4 +281,48 @@ $resu = "";
 			?>
             </div>
         </div>
-    </div>
+</div>
+
+        <div class="container-fluid">
+
+            <div class="row cm-fix-height">
+            </div>
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+
+                              <div class="panel panel-primary">
+                                  <div class="panel-body">
+                                  <form action="" method="post">
+                                       <input type="hidden" id="disabledTextInput" class="form-control" name="txtref" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>">
+                                       <label for="disabledTextInput">Add Comment</label>
+                                        <textarea class="form-control" rows="3" name="txtcomment"></textarea><br />
+                                        <div align="center">
+                                        <button type="submit" class="btn btn-primary" name="btn_addNote" >Save Comment</button></div>
+                                      </form>
+                                        <?php include ("app/appdata/connection.php"); ?>
+                                        <?php
+                                        $notes = $_POST ['txtcomment'];
+                                        $val = $_SESSION ['user'];
+                                        $Ref = $_POST['txtref'];
+
+                                        if(isset ($_POST['btn_addNote']))
+                                        {
+                                        $sql3 = "insert into tbl_ordernotes(Nref,Username,comments) values ('$Ref','$val','$notes')";
+
+                                        if (mysqli_query($connect,$sql3))
+                                        {
+
+                                        }
+                                        else{
+                                        $resu = mysqli_error($connect);
+                                        echo $resu;
+                                        }
+                                        }
+                                        ?>
+
+
+
+                </div>
+            </div>
+        </div>
