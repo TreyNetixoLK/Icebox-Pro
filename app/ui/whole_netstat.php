@@ -10,8 +10,11 @@
         <div class="panel panel-default">
 
             <div class="panel-body">
-              <iframe src="https://status.lankahost.net/" width="1000px" height="700px"></iframe>
+              
 
+              <object data="https://status.lankahost.net/" width="1500" height="700">
+
+              </object>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
 error_reporting(0); ?>
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">Pending Projects</h2>
     </div>
     <div class="container-fluid">
 
@@ -83,7 +83,7 @@ if(isset ($_POST['btn_Save']))
   <tr>
   	<th><b>Netixo Reference</b></th>
   	<th><b>Segment</b></th>
-  	<th><b>Customer / Company Name</b></th>
+  	<th><b>Company Name</b></th>
   	<th><b>Plan Name</b></th>
   	<th><b>Comments</b></th>
   </tr>

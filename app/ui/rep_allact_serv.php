@@ -1,7 +1,7 @@
 <?php include ("app/appdata/connection.php"); ?>
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">Configuration Report</h2>
     </div>
     <div class="container-fluid">
 
@@ -11,7 +11,6 @@
 
             <div class="panel-body">
               <?php include ("app/appdata/general.php"); ?>
-              <h1 align="center">Configuration Reprot</h1>
 <br />
 <div class="row">
   <div class="col-md-1"></div>
@@ -31,7 +30,7 @@
   <tbody>
   <?php
 
-	  $tbsql="SELECT * FROM tbl_orders where Status ='Active'";
+	  $tbsql="SELECT * FROM tbl_orders where net_status ='Active'";
 
 	  $records =mysqli_query($connect,$tbsql);
       while($package=mysqli_fetch_assoc($records))

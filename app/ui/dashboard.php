@@ -113,7 +113,7 @@ $sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Createdby='$val54'";
 ?>
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">Dashboard</h2>
     </div>
     <div class="container-fluid">
         <div class="row cm-fix-height">

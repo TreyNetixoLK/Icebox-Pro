@@ -1,4 +1,5 @@
 <?php include('app/appdata/hunter.php')?>
+
 <nav class="cm-navbar cm-navbar-primary">
     <div class="cm-flex"><a href="index.html"><img src="assets/img/logo3_White.png" height="50px" width="100px"></a></div>
     <div class="btn btn-primary md-menu-white" data-toggle="cm-menu"></div>
@@ -35,8 +36,9 @@
                     <a class="sf-terminal">Network Management <span class="caret"></span></a>
                     <ul>
                         <li><a href="main.php?page=serverstatus">Server Status</a></li>
-                        <li><a href="main.php?page=manageservers">Manage Servers</a></li>
+                        <li><a href="main.php?page=manageservers">Manage Services</a></li>
                         <li><a href="main.php?page=whole_netstat">Wholesale Network Status</a></li>
+                        <li><a href="https://akismet.com/account/" target="_blank">Search Engine Optimize</a></li>
                     </ul>
                 </li>
                 <li class="cm-submenu">
