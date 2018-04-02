@@ -41,6 +41,7 @@ $DNS2=$package["DNSSID2"];
 $MIP=$package["MIPAdd"];
 $server=$package["Server"];
 $Bandwith=$package["Bandwith"];
+$serv_stat =$package['net_status'];
 
 $appraisal = $package["appraisal"];
 $ui = $package["ui_design"];
@@ -395,7 +396,30 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
                   </tr>
                   <tr>
                     <td><strong>Status</strong></td>
-                    <td><span class="badge badge-pill badge-success"><?php echo $status; ?></span></td>
+                    <td>
+                      <?php
+              $act = 'Active';
+            $pending = 'Pending';
+              $prog = 'Cancelled';
+
+          if ($serv_stat == $act)
+          {
+            echo "<h4><span class='label label-success'>".$serv_stat."</span></h4>";
+          }
+            else if ($serv_stat == $pending)
+          {
+            echo "<h4><span class='label label-default'>".$serv_stat."</span></h4>";
+          }
+          else if ($serv_stat == $prog)
+          {
+            echo "<h4><span class='label label-warning'>".$serv_stat."</span></h4>";
+          }
+          else
+          {
+            echo "<h4><span class='label label-danger'>".$serv_stat."</span></h4>";
+          }
+          ?>
+                    </td>
                     <td><strong>Control Panel</strong></td>
                     <td><a href="https:<?php echo $cpurl; ?>" target="_blank"><?php echo $cpurl; ?></a></td>
                   </tr>
@@ -421,11 +445,23 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>System Architect</td>
-<td>Edinburgh</td>
-<td>61</td>
-</tr>
+  <?php
+
+  	  $tbsql="SELECT * FROM tbl_ordernotes where Nref=$ordernumb";
+
+  	  $records =mysqli_query($connect,$tbsql);
+        while($package=mysqli_fetch_assoc($records))
+  	  		{
+  		  echo "<tr>";
+  		  echo "<td>".$package["date"]."</td>";
+  		  echo "<td>".$package["Username"]."</td>";
+  		  echo "<td>".$package["comments"]."</td>";
+  		  echo "</tr>";
+
+
+  	  		} // end While loop
+
+  	  ?>
 </tbody>
 </table>
 </div>
