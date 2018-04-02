@@ -37,6 +37,40 @@
   </div>
 </div>
 </form>
+<?php
+error_reporting(0);
+?>
+<?php
+
+$pwd= md5($_POST['txtpword']);
+$con= $_POST['txtconfirm'];
+$val = $_POST ['txtuname'];
+$resu = "";
+$resu1="";
+
+if(isset ($_POST['btnChange']))
+{
+	$sql88 = "Update tbl_users set Password='$pwd' where Username='$val'";
+
+	if (($_POST['txtpword']) != ($_POST['txtconfirm']))
+	{
+		$resu1 = "The Password you have entered does not match";
+		echo "<div class='alert alert-warning' role='alert'>".$resu1."</div>";
+	}
+
+	else if (mysqli_query($connect,$sql88))
+	{
+		$resu = "Your Password has been changed.";
+		echo "<div class='alert alert-success' role='alert'>".$resu."</div>";
+	}
+	else{
+
+		echo  mysqli_error($connect);
+
+		}
+}
+?>
+  	
 
             </div>
         </div>

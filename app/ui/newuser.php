@@ -1,4 +1,8 @@
 <?php include ("app/appdata/connection.php"); ?>
+<?php
+// Turn off all error reporting
+error_reporting(0);
+?>
 <div id="global">
     <div class="container-fluid cm-container-white">
         <h2 style="margin-top:0;">Create New User Account</h2>
@@ -43,9 +47,36 @@
     </div>
     <div align="center">
     <button type="submit" class="btn btn-success" name="btn_Save">Create User</button>
-    <button type="reset" class="btn btn-primary">Reset Fields</button>
     </div>
 </form>
+<br />
+<?php
+
+$fname= $_POST['txtfname'];
+$designation= $_POST['txtdesign'];
+$email= $_POST['txtemail'];
+$uname= $_POST['txtuname'];
+$pword= $_POST['txtpword'];
+$Access= $_POST['projeng'];
+
+$resu = "";
+$resu1="";
+
+if(isset ($_POST['btn_Save']))
+{
+	$passwordmd5 = md5($pword);
+	$sql32 = "INSERT INTO tbl_users (F_name,Designation,Email,Username,Password,AccessLevel) VALUES ('$fname','$designation','$email','$uname','$passwordmd5','$Access')";
+    if (mysqli_query($connect,$sql32))
+	{
+			$resu = "<div class='alert alert-success' role='alert'>User Account have been Created</div>";
+		    echo $resu;
+	}
+	else{
+		$resu ="<div class='alert alert-success' role='alert'>".mysqli_error($connect)."</div>";
+		echo $resu;
+		}
+}
+?>
 
             </div>
         </div>

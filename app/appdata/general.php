@@ -10,10 +10,10 @@ function admin_protect()
 
 	while($row=mysqli_fetch_array($sql9))
 	{
-		$admins = $row[6];
+		$users = $row[6];
 
 
-        if ($admins <> "Administrator")
+        if ($users == "User")
 		{
 			echo ("<div class='row'>
                       <div class='col-md-6 col-md-offset-3'>

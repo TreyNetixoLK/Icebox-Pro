@@ -15,7 +15,7 @@ if(isset ($_POST['btn_Login']))
 	{
 	$user;$pass;
 	$user=$_POST['txtusername'];
-	$pass= ($_POST['txtpassword']);
+	$pass=md5($_POST['txtpassword']);
 	$query =mysqli_query($con,"select * from tbl_users where Username = '$user' and Password = '$pass'");
 
 	$rows = mysqli_num_rows($query);
