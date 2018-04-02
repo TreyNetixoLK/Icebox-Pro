@@ -29,7 +29,7 @@ $sql="SELECT COUNT(Status) FROM tbl_orders WHERE Status='Progressing'";
 ?>
 <?php
 
-$sql2="SELECT COUNT(Status) FROM tbl_orders WHERE Status='Active'";
+$sql2="SELECT COUNT(Status) FROM tbl_orders WHERE net_status='Active'";
 
  if($result=mysqli_query($connect,$sql2))
 	   {
@@ -84,8 +84,8 @@ $sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Status='Pending'";
 
 ?>
 <?php
-$val54 = $_SESSION ['user'];
-$sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Createdby='$val54'";
+$date = date('Y-m-d');
+$sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Ord_Rec_Date='$date;'";
 
  if($result=mysqli_query($connect,$sql3))
 	   {
@@ -200,9 +200,27 @@ $sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Createdby='$val54'";
                    <div class="col-lg-4">
                        <div class="panel panel-default">
                            <div class="panel-heading">
-                               <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn"> Notice Board</h3>
+                               <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn"> Ongoing Projects</h3>
                            </div>
                            <div class="panel-body">
+                             <?php
+
+
+$tbsql879="SELECT * FROM tbl_orders where Status = 'Progressing'";
+
+$records =mysqli_query($connect,$tbsql879);
+while($package=mysqli_fetch_assoc($records))
+{
+echo "<div class='panel panel-primary'>";
+echo "<div class='panel-body'>";
+echo "<h4 align='center'><b>#N".$package["OrderID"]."&nbsp-&nbsp".$package["CustName"]."</b></h4>";
+echo "<p><b>Assigned Engineer :&nbsp</b>".$package["ProjectEngineer"]."</p>";
+echo "<p><b>ETA :&nbsp</b>".$package["ETA"]."</p>";
+echo "</div>";
+echo "</div>";
+} // end While loop
+
+?>
                               <div class="list-group">
 
 
@@ -234,7 +252,7 @@ $sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Createdby='$val54'";
                                           <?php
    $val = $_SESSION ['user'];
 
-   $tbsql="SELECT * FROM tbl_orders where Status = 'Progressing'";
+   $tbsql="SELECT * FROM tbl_orders where Status = 'Pending'";
 
    $records =mysqli_query($connect,$tbsql);
      while($package=mysqli_fetch_assoc($records))
