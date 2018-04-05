@@ -1,7 +1,7 @@
 <?php include ("app/appdata/connection.php"); ?>
-<?php include('app/appdata/hunter.php')?>
+<?php include ('app/appdata/hunter.php')?>
 <?php
-// Turn off all error reporting
+// Turn off all error WWWreporting
 error_reporting(0);
 ?>
 <div id="global">
@@ -16,12 +16,12 @@ error_reporting(0);
 
             <div class="panel-body">
 
-              <form action="" method="post">
+              <form action="" method="post" id="orderform">
 <div class="col-xs-6">
 <div class="form-group">
 <label for="disabledTextInput">NIC No</label>
 <div class="form-inline">
-<input type="text" id="disabledTextInput" class="form-control" placeholder="XXXXXXXXXV" name="txtnicno" value ="<?php if(isset($_POST['txtnicno'])){ echo($_POST['txtnicno']); } ?>">
+<input type="text" id="order_nic" class="form-control" placeholder="XXXXXXXXXV" name="txtnicno" value ="<?php if(isset($_POST['txtnicno'])){ echo($_POST['txtnicno']); } ?>">
 <button type="submit" class="btn btn-primary" name="btn_lookup"><a class="fa fa fa-search" style="color:white;"></a></button>
 </div>
 </div>
@@ -53,7 +53,7 @@ error_reporting(0);
       }
      else
       {
-       $msg="<h3 style=color:red;>Not Found!</h3>";
+       $msg="<h6 style=color:red;>Looks like the user details are not available in our database. Create the customer profile first and try again.!</h6>";
        echo $msg;
       }
 
@@ -68,32 +68,32 @@ error_reporting(0);
 ?>
 <div class="form-group">
 <label for="disabledTextInput">Name of Authorised Contact</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="John Smith" name="txtauthcontact" value="<?php echo $fname." ".$lname;?>">
+<input type="text" id="order_contact" class="form-control" placeholder="John Smith" name="txtauthcontact" value="<?php echo $fname." ".$lname;?>" readonly>
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Permanent Address</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="Street Number" name="txtadd1" value="<?php echo $add1; ?>">
+<input type="text" id="order_address1" class="form-control" placeholder="Street Number" name="txtadd1" value="<?php echo $add1; ?>" readonly>
 </div>
 <div class="form-group">
-<input type="text" id="disabledTextInput" class="form-control" placeholder="Street Name" name="txtadd2" value="<?php echo $add2; ?>">
+<input type="text" id="order_address2" class="form-control" placeholder="Street Name" name="txtadd2" value="<?php echo $add2; ?>" readonly>
 </div>
 <div class="form-group">
-<input type="text" id="disabledTextInput" class="form-control" placeholder="Suburb" name="txtadd3" value="<?php echo $add3; ?>">
+<input type="text" id="order_address3" class="form-control" placeholder="Suburb" name="txtadd3" value="<?php echo $add3; ?>" readonly>
 </div>
 <div class="form-group">
-<input type="text" id="disabledTextInput" class="form-control" placeholder="Postal Code" name="txtadd4" value="<?php echo $add4; ?>">
+<input type="text" id="order_address4" class="form-control" placeholder="Postal Code" name="txtadd4" value="<?php echo $add4; ?>" readonly>
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Email Address</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="email@domain.com" name="txtemail" value="<?php echo $email; ?>">
+<input type="text" id="disabledTextInput" class="form-control" placeholder="email@domain.com" name="txtemail" value="<?php echo $email; ?>" readonly>
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Contact Number</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="Contact Number with country code for oversease clients" name="txtcontactno" value="<?php echo $contact; ?>">
+<input type="text" id="order_contactnum" class="form-control" placeholder="Contact Number with country code for oversease clients" name="txtcontactno" value="<?php echo $contact; ?>" readonly>
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Country</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="Sri Lanka" name="txtcountry" value="<?php echo $country; ?>">
+<input type="text" id="order_country" class="form-control" placeholder="Sri Lanka" name="txtcountry" value="<?php echo $country; ?>">
 </div>
 </div>
 <div class="col-xs-6">
@@ -103,7 +103,7 @@ error_reporting(0);
   </div>
   <div class="form-group">
   <label for="disabledSelect">Order Type</label>
-  <select id="disabledSelect" class="form-control" name="txtordtype">
+  <select id="order_type" class="form-control" name="txtordtype">
   <option></option>
   <option>Dynamic Web Site</option>
   <option>Static Web Site</option>
@@ -116,19 +116,19 @@ error_reporting(0);
   </div>
   <div class="form-group">
   <label for="disabledTextInput">Company Name</label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="Sunshine Holdings" name="txtcompname">
+  <input type="text" id="order_company" class="form-control" placeholder="Sunshine Holdings" name="txtcompname">
   </div>
   <div class="form-group">
   <label for="disabledTextInput">Business Registration No</label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="WA/02/49950" name="txtbusregno">
+  <input type="text" id="order_br" class="form-control" placeholder="WA/02/49950" name="txtbusregno">
   </div>
 <div class="form-group">
 <label for="disabledTextInput">Domain Name</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="example.com" name="txtdomainname">
+<input type="text" id="order_domain" class="form-control" placeholder="example.com" name="txtdomainname">
 </div>
 <div class="form-group">
 <label for="disabledSelect">Plan Name</label>
-<select class="form-control" name="txtplan">
+<select class="form-control" name="txtplan" id="order_plan">
 <option></option>
 <?php
 
@@ -146,7 +146,7 @@ while($row=mysqli_fetch_array($sql4))
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Contract Term</label>
-<select id="disabledSelect" class="form-control" name="txtcontractterm">
+<select id="order_contract" class="form-control" name="txtcontractterm">
 <option></option>
 <option>12 Months</option>
 <option>24 Months</option>
@@ -156,7 +156,7 @@ while($row=mysqli_fetch_array($sql4))
 
 <div class="form-group">
 <label for="disabledTextInput">Account Manager</label>
-<input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtaccountmanager" value="<?php echo $fullname; ?>" readonly>
+<input type="text" id="order_am" class="form-control" placeholder="" name="txtaccountmanager" value="<?php echo $fullname; ?>" readonly>
 </div>
 </div>
 <div class="col-xs-12">
@@ -165,7 +165,7 @@ while($row=mysqli_fetch_array($sql4))
 <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="Please describe the customers requirement"></textarea>
 </div>
 <div align="center">
-<button type="submit" class="btn btn-success" name="btn_CreateSale">Create Order</button>
+<button type="button" id="order_btn" class="btn btn-success" name="btn_CreateSale">Create Order</button>
 </div>
 </form>
 <br />
@@ -211,3 +211,49 @@ if (mysqli_query($connect,$sql))
             </div>
         </div>
     </div>
+    <script>
+
+    function ValidateText (id)
+    {
+      if($("#"+id).val()==null || $("#"+id).val()=="" )
+      {
+        var div = $("#"+id).closest("div");
+        div.addclass("has-error");
+        return false;
+      }
+      else
+      {
+        var div = $("#"+id).closest("div");
+        div.removeclass("has-error");
+        return true;
+      }
+    }
+    $(document).ready(
+
+      function()
+      {
+        $("#order_btn").click(function()
+          {
+              if(!ValidateText("order_br"))
+              {
+                return false;
+              }
+              if(!ValidateText("order_company"))
+              {
+                return false;
+              }
+              if(!ValidateText("order_country"))
+              {
+                return false;
+              }
+              if(!ValidateText("order_domain"))
+              {
+                return false;
+              }
+
+              $("form#orderform").submit();
+          }
+          );
+      }
+    );
+    </script>
