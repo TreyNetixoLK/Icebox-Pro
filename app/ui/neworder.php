@@ -53,7 +53,7 @@ error_reporting(0);
       }
      else
       {
-       $msg="<h6 style=color:red;>Looks like the user details are not available in our database. Create the customer profile first and try again.!</h6>";
+       $msg="<h6 style=color:red;>Looks like the user details are not available in the database. Create the customer profile first and try again.!</h6>";
        echo $msg;
       }
 
@@ -165,7 +165,7 @@ while($row=mysqli_fetch_array($sql4))
 <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="Please describe the customers requirement"></textarea>
 </div>
 <div align="center">
-<button type="button" id="order_btn" class="btn btn-success" name="btn_CreateSale">Create Order</button>
+<button type="submit" id="order_btn" class="btn btn-success" name="btn_CreateSale">Create Order</button>
 </div>
 </form>
 <br />

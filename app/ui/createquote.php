@@ -40,8 +40,6 @@ error_reporting(0);
 
 			     $id=$row[0] ;
 				 $name=$row[1];
-				 $nic =$row[2];
-				 $breg =$row[3];
 				 $ordtype =$row[4];
 				 $Scontact =$row[5];
 				  $add1 =$row[6];
@@ -50,23 +48,6 @@ error_reporting(0);
           $add4 =$row[9];
           $country =$row[10];
 				  $domain =$row[14];
-				  $hosting =$row[10];
-				  $bandwith =$row[11];
-				  $cpun =$row[12];
-				  $cppw =$row[13];
-				  $eacc =$row[15];
-				  $PE =$row[16];
-				  $cmnt =$row[17];
-				  $purl =$row[18];
-				  $dns1 =$row[19];
-				  $dns2 =$row[20];
-				  $mipa =$row[21];
-				  $svr =$row[22];
-				  $stat =$row[23];
-				  $creat =$row[24];
-				  $ETA =$row[26];
-                  $Rec_d =$row[27];
-                  $Act_d =$row[28];
 
 			  }
 		   }

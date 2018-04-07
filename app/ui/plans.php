@@ -87,7 +87,7 @@ if (mysqli_query($connect,$sql))
  <thead>
   <tr>
   	<th><b>Plan Name</b></th>
-  	<th><b>Wholesale Reference</b></th>
+  	<th><b>Contract Term</b></th>
   	<th><b>Price [LKR]</b></th>
   </tr>
   </thead>
