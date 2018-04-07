@@ -1,6 +1,6 @@
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">Sales Statistic Report</h2>
     </div>
     <div class="container-fluid">
 

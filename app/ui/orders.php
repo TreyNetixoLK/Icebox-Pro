@@ -432,6 +432,44 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
               </div>
               <br/ >
               <div class="col-md-12">
+                <!-- Add Notes Section -->
+                <div class="col-md-6">
+                  <h3><b>Add Quick Notes</b></h3>
+                  <br />
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                      <form action="" method="post">
+                           <input type="hidden" id="disabledTextInput" class="form-control" name="txtref" value="<?php if(isset($ordernumb)){ echo($ordernumb); } ?>">
+                           <label for="disabledTextInput">Add Comment</label>
+                            <textarea class="form-control" rows="3" name="txtcomment"></textarea><br />
+                            <div align="center">
+                            <button type="submit" class="btn btn-success" name="btn_addNote" >Save Comment</button></div>
+                          </form>
+                          <?php
+                          $notes = $_POST ['txtcomment'];
+                          $val = $_SESSION ['user'];
+                          $Ref = $_POST['txtref'];
+
+                          if(isset ($_POST['btn_addNote']))
+                          {
+                          $sql3 = "insert into tbl_ordernotes(Nref,Username,comments) values ('$Ref','$val','$notes')";
+
+                          if (mysqli_query($connect,$sql3))
+                          {
+
+                          }
+                          else{
+                          $resu = mysqli_error($connect);
+                          echo $resu;
+                          }
+                          }
+                          ?>
+
+    </div>
+</div>
+                </div>
+                <!-- End of Add Notes Section -->
+                <div class="col-md-6">
                 <!-- Order Notes Section -->
                 <h3><b>Project History</b></h3>
                 <br />
@@ -466,6 +504,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 </table>
 </div>
                 <!-- end of Order Notes -->
+              </div>
               </div>
             </div>
             <div class="col-md-12 article-v1-footer">
