@@ -49,7 +49,14 @@ error_reporting(0);
                                                $nic =$row[8];
                                                $contact =$row[9];
                                                $gitrepo =$row[15];
+
                                                $status =$row[30];
+                                               $appraisal = $row[32];
+                                               $uidesign = $row[33];
+                                               $dbdesign = $row[34];
+                                               $develop = $row[35];
+                                               $testing =$row[36];
+                                               $completion =$row [37];
 
                      }
                     }
@@ -96,7 +103,7 @@ error_reporting(0);
               </div>
 
               </div>
-    
+
             <div class="col-xs-6">
             <div class="form-group">
               <label for="disabledTextInput">Customer / Company Name</label>
@@ -115,17 +122,17 @@ error_reporting(0);
                  <td>Order Appraisal</td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-todo" name="appraisal">
+                 <input type="radio" value="progress-todo" name="appraisal" <?php if($appraisal == "progress-todo"){echo "checked";} ?>>
                  <label><small>Pending</small> </label>
-                 </div></td>
+               </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio"  value="progress-done progress-current" name="appraisal">
+                 <input type="radio"  value="progress-done progress-current" name="appraisal" <?php if($appraisal == "progress-done progress-current"){echo "checked";} ?>>
                  <label><small>Progressing</small></label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-done" name="appraisal">
+                 <input type="radio" value="progress-done" name="appraisal" <?php if($appraisal == "progress-done"){echo "checked";} ?>>
                  <label><small>Completed</small> </label>
                  </div></td>
 
@@ -134,17 +141,17 @@ error_reporting(0);
                  <td>UI Design</td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-todo" name="uidesign">
+                 <input type="radio" value="progress-todo" name="uidesign" <?php if($uidesign == "progress-todo"){echo "checked";} ?>>
                  <label><small>Pending</small> </label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio"  value="progress-done progress-current" name="uidesign">
+                 <input type="radio"  value="progress-done progress-current" name="uidesign" <?php if($uidesign == "progress-done progress-current"){echo "checked";} ?>>
                  <label><small>Progressing</small></label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-done" name="uidesign">
+                 <input type="radio" value="progress-done" name="uidesign" <?php if($uidesign == "progress-done"){echo "checked";} ?>>
                  <label><small>Completed</small> </label>
                  </div></td>
 
@@ -153,17 +160,17 @@ error_reporting(0);
                  <td>Database Design</td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-todo" name="dbdesign">
+                 <input type="radio" value="progress-todo" name="dbdesign" <?php if($dbdesign == "progress-todo"){echo "checked";} ?>>
                  <label><small>Pending</small> </label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio"  value="progress-done progress-current" name="dbdesign">
+                 <input type="radio"  value="progress-done progress-current" name="dbdesign" <?php if($dbdesign == "progress-done progress-current"){echo "checked";} ?>>
                  <label><small>Progressing</small></label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-done" name="dbdesign">
+                 <input type="radio" value="progress-done" name="dbdesign" <?php if($dbdesign == "progress-done"){echo "checked";} ?>>
                  <label><small>Completed</small> </label>
                  </div></td>
 
@@ -172,17 +179,17 @@ error_reporting(0);
                  <td>Development</td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-todo" name="development">
+                 <input type="radio" value="progress-todo" name="development" <?php if($develop == "progress-todo"){echo "checked";} ?>>
                  <label><small>Pending</small> </label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio"  value="progress-done progress-current" name="development">
+                 <input type="radio"  value="progress-done progress-current" name="development" <?php if($develop == "progress-done progress-current"){echo "checked";} ?>>
                  <label><small>Progressing</small></label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-done" name="development">
+                 <input type="radio" value="progress-done" name="development" <?php if($develop == "progress-done"){echo "checked";} ?>>
                  <label><small>Completed</small> </label>
                  </div></td>
 
@@ -191,17 +198,17 @@ error_reporting(0);
                  <td>Testing</td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-todo" name="testing">
+                 <input type="radio" value="progress-todo" name="testing" <?php if($testing == "progress-todo"){echo "checked";} ?>>
                  <label><small>Pending</small> </label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio"  value="progress-done progress-current" name="testing">
+                 <input type="radio"  value="progress-done progress-current" name="testing" <?php if($testing == "progress-done progress-current"){echo "checked";} ?>>
                  <label><small>Progressing</small></label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-done" name="testing">
+                 <input type="radio" value="progress-done" name="testing" <?php if($testing == "progress-done"){echo "checked";} ?>>
                  <label><small>Completed</small> </label>
                  </div></td>
 
@@ -210,17 +217,17 @@ error_reporting(0);
                  <td>Completion</td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-todo" name="completed">
+                 <input type="radio" value="progress-todo" name="completed" <?php if($completion == "progress-todo"){echo "checked";} ?>>
                  <label><small>Pending</small> </label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio"  value="progress-done progress-current" name="completed">
+                 <input type="radio"  value="progress-done progress-current" name="completed" <?php if($completion == "progress-done progress-current"){echo "checked";} ?>>
                  <label><small>Progressing</small></label>
                  </div></td>
                  <td>
                  <div class="form-group form-animate-checkbox">
-                 <input type="radio" value="progress-done" name="completed">
+                 <input type="radio" value="progress-done" name="completed" <?php if($completion == "progress-done"){echo "checked";} ?>>
                  <label><small>Completed</small> </label>
                  </div></td>
 
