@@ -29,6 +29,9 @@ error_reporting(0);
          $DDNS1 = $row[26];
          $DDNS2 = $row[27];
          $Platform =$row[17];
+         $Server = $row[29];
+         $Nstatus = $row[31];
+
        }
       }
      else
@@ -115,7 +118,7 @@ error_reporting(0);
        while($row=mysqli_fetch_array($sql))
        {
        ?>
-       <option><?php echo $row["serv_name"]?></option>
+       <option <?php if (!empty($Server) && $Server == $row["serv_name"])  echo 'selected = "selected"'; ?>><?php echo $row["serv_name"]?></option>
        <?php
 
        }
@@ -127,13 +130,13 @@ error_reporting(0);
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Service Status</label>
        <div class="col-sm-6">
-       <select class="form-control" name="txtstat">
-       <option></option>
-       <option>Active</option>
-       <option>Cancelled</option>
-       <option>Pending</option>
-       <option>Permanently Deactivated</option>
-       </select>
+         <select class="form-control" name="txtstat">
+         <option></option>
+         <option <?php if (!empty($Nstatus) && $Nstatus == 'Active')  echo 'selected = "selected"'; ?>>Active</option>
+         <option <?php if (!empty($Nstatus) && $Nstatus == 'Cancelled')  echo 'selected = "selected"'; ?>>Cancelled</option>
+         <option <?php if (!empty($Nstatus) && $Nstatus == 'Pending')  echo 'selected = "selected"'; ?>>Pending</option>
+         <option <?php if (!empty($Nstatus) && $Nstatus == 'Permanently Deactivated')  echo 'selected = "selected"'; ?>>Permanently Deactivated</option>
+         </select>
        </div>
        </div>
            </div>
@@ -172,7 +175,13 @@ error_reporting(0);
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Platform</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtplat"  value="<?php echo $Platform; ?>">
+       <select class="form-control" name="txtplat">
+       <option></option>
+       <option <?php if (!empty($Platform) && $Platform == 'Cpanel')  echo 'selected = "selected"'; ?>>Cpanel</option>
+       <option <?php if (!empty($Platform) && $Platform == 'Plesk')  echo 'selected = "selected"'; ?>>Plesk</option>
+       <option <?php if (!empty($Platform) && $Platform == 'Azure')  echo 'selected = "selected"'; ?>>Azure</option>
+       <option <?php if (!empty($Platform) && $Platform == 'AWS')  echo 'selected = "selected"'; ?>>AWS</option>
+       </select>
        </div>
        </div>
        <div class="form-group">
