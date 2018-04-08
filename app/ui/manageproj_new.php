@@ -92,13 +92,13 @@ error_reporting(0);
 
               <div class="form-group">
               <label for="disabledTextInput">Status</label>
-              <select id="disabledSelect" class="form-control" name="txtstatus" value="<?php echo $status; ?> ">
+              <select id="disabledSelect" class="form-control" name="txtstatus" value="">
               <option></option>
-              <option>Pending</option>
-              <option>Progressing</option>
-              <option>On Hold</option>
-              <option>Withdrawn</option>
-              <option>Completed</option>
+              <option <?php if (!empty($status) && $status == 'Pending')  echo 'selected = "selected"'; ?>>Pending</option>
+              <option <?php if (!empty($status) && $status == 'Progressing')  echo 'selected = "selected"'; ?>>Progressing</option>
+              <option <?php if (!empty($status) && $status == 'On Hold')  echo 'selected = "selected"'; ?>>On Hold</option>
+              <option <?php if (!empty($status) && $status == 'Withdrawn')  echo 'selected = "selected"'; ?>>Withdrawn</option>
+              <option <?php if (!empty($status) && $status == 'Completed')  echo 'selected = "selected"'; ?>>Completed</option>
               </select>
               </div>
 

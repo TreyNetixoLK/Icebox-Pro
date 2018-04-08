@@ -28,7 +28,7 @@
                     <a class="sf-brick">Project Management <span class="caret"></span></a>
                     <ul>
                         <li><a href="main.php?page=search">Search Project</a></li>
-                        <li><a href="main.php?page=manageproj">Manage Project</a></li>
+                        <li><a href="main.php?page=manageproj_new">Manage Project</a></li>
                         <li><a href="main.php?page=pendingproj">Pending Projects</a></li>
                     </ul>
                 </li>
