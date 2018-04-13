@@ -16,12 +16,12 @@ error_reporting(0);
 
             <div class="panel-body">
 
-              <form action="" method="post" id="orderform">
+              <form action="" method="post" id="orderform" data-parsley-validate="">
 <div class="col-xs-6">
 <div class="form-group">
 <label for="disabledTextInput">NIC No</label>
 <div class="form-inline">
-<input type="text" id="order_nic" class="form-control" placeholder="XXXXXXXXXV" name="txtnicno" value ="<?php if(isset($_POST['txtnicno'])){ echo($_POST['txtnicno']); } ?>">
+<input type="text" id="order_nic" class="form-control" required="" placeholder="XXXXXXXXXV" name="txtnicno" value ="<?php if(isset($_POST['txtnicno'])){ echo($_POST['txtnicno']); } ?>">
 <button type="submit" class="btn btn-primary" name="btn_lookup"><a class="fa fa fa-search" style="color:white;"></a></button>
 </div>
 </div>
@@ -93,7 +93,7 @@ error_reporting(0);
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Country</label>
-<input type="text" id="order_country" class="form-control" placeholder="Sri Lanka" name="txtcountry" value="<?php echo $country; ?>">
+<input type="text" id="order_country" class="form-control" placeholder="Sri Lanka" name="txtcountry" required="" value="<?php echo $country; ?>">
 </div>
 </div>
 <div class="col-xs-6">
@@ -120,7 +120,7 @@ error_reporting(0);
   </div>
   <div class="form-group">
   <label for="disabledTextInput">Business Registration No</label>
-  <input type="text" id="order_br" class="form-control" placeholder="WA/02/49950" name="txtbusregno">
+  <input type="text" id="order_br" class="form-control" placeholder="WA/02/49950" name="txtbusregno" required="">
   </div>
 <div class="form-group">
 <label for="disabledTextInput">Domain Name</label>
@@ -211,6 +211,7 @@ if (mysqli_query($connect,$sql))
             </div>
         </div>
     </div>
+
     <script>
 
     function ValidateText (id)

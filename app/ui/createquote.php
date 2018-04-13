@@ -5,7 +5,7 @@ error_reporting(0);
 ?>
 <div id="global">
     <div class="container-fluid cm-container-white">
-        <h2 style="margin-top:0;">Welcome to ICEBOX Pro !</h2>
+        <h2 style="margin-top:0;">Generate Quote</h2>
     </div>
     <div class="container-fluid">
 
@@ -66,7 +66,7 @@ error_reporting(0);
 	}
 	?>
               <br />
-              <form action="app/appdata/dompdf_ops.php" method="post">
+              <form action="app/appdata/dompdf_ops.php" method="post" data-parsley-validate="">
               <div class="col-xs-6">
               <div class="form-group">
                 <label for="disabledTextInput">Order Reference</label>
@@ -82,12 +82,12 @@ error_reporting(0);
           <div class="col-xs-12">
           <div class="form-group">
             <label for="disabledTextInput">Requirement</label>
-            <textarea class="form-control" rows="3" data-length="800" placeholder="Please describe the customers requirement" name="description"></textarea>
+            <textarea class="form-control" rows="3" data-length="800" placeholder="Please describe the customers requirement" name="description" data-parsley-required=""></textarea>
               </div></div>
               <div class="col-xs-12">
               <div class="form-group">
                 <label for="disabledTextInput">Price</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="3200.00" name="price">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="3200.00" name="price" data-parsley-required="">
                   </div>
                   <input type="hidden" class="form-control" name="domain" value="<?php echo $domain; ?>" id="exampleFormControlInput1">
                   <input type="hidden" class="form-control" name="type" value="<?php echo $ordtype; ?>" id="exampleFormControlInput1">

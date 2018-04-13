@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/material-design.css">
         <link rel="stylesheet" type="text/css" href="assets/css/small-n-flat.css">
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+          <link rel="stylesheet" type="text/css" href="assets/css/parsley.css">
 
         <title>ICEBOX Pro</title>
     </head>

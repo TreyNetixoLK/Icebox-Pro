@@ -14,42 +14,42 @@ error_reporting(0);
         <div class="panel panel-default">
 
             <div class="panel-body">
-              <form action="" method="post">
+              <form action="" method="post" data-parsley-validate="">
   <div class="col-xs-6">
   <div class="form-group">
   <label for="disabledTextInput">First Name</label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="John" name="txtfname">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="John" name="txtfname" required="">
   </div>
   <div class="form-group">
   <label for="disabledTextInput">Email Address</label>
-  <input type="email" id="disabledTextInput" class="form-control" placeholder="emal@domain.com" name="txtemail">
+  <input type="email" id="disabledTextInput" class="form-control" placeholder="emal@domain.com" name="txtemail" data-parsley-type="email">
   </div>
   <div class="form-group">
   <label for="disabledTextInput">NIC No</label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="XXXXXXXXXV" name="txtnicno">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="XXXXXXXXXV" name="txtnicno" required="">
   </div>
   <div class="form-group">
   <label for="disabledTextInput">Contact Number</label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="+947X XXXXXXXX" name="txtcontact">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="+947X XXXXXXXX" name="txtcontact" required="">
   </div>
   </div>
   <div class="col-xs-6">
   <div class="form-group">
   <label for="disabledTextInput">Last Name</label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="Smith" name="txtlname">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="Smith" name="txtlname" required="">
   </div>
   <div class="form-group">
   <label for="disabledTextInput">Permanent Address</label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="Street Number" name="txtadd1">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="Street Number" name="txtadd1" data-parsley-required="">
   <div class="form-group">
   <label for="disabledTextInput"></label>
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="Street Name" name="txtadd2">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="Street Name" name="txtadd2" required="">
   </div>
   <div class="form-group">
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="Suburb" name="txtadd3">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="Suburb" name="txtadd3" required="">
   </div>
   <div class="form-group">
-  <input type="text" id="disabledTextInput" class="form-control" placeholder="Postal Code" name="txtadd4">
+  <input type="text" id="disabledTextInput" class="form-control" placeholder="Postal Code" name="txtadd4" required="">
   </div>
   </div>
 
