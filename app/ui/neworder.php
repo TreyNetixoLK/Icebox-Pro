@@ -21,7 +21,7 @@ error_reporting(0);
 <div class="form-group">
 <label for="disabledTextInput">NIC No</label>
 <div class="form-inline">
-<input type="text" id="order_nic" class="form-control" required="" placeholder="XXXXXXXXXV" name="txtnicno" value ="<?php if(isset($_POST['txtnicno'])){ echo($_POST['txtnicno']); } ?>">
+<input type="text" id="order_nic" class="form-control" placeholder="XXXXXXXXXV" name="txtnicno" value ="<?php if(isset($_POST['txtnicno'])){ echo($_POST['txtnicno']); } ?>">
 <button type="submit" class="btn btn-primary" name="btn_lookup"><a class="fa fa fa-search" style="color:white;"></a></button>
 </div>
 </div>
@@ -93,7 +93,7 @@ error_reporting(0);
 </div>
 <div class="form-group">
 <label for="disabledTextInput">Country</label>
-<input type="text" id="order_country" class="form-control" placeholder="Sri Lanka" name="txtcountry" required="" value="<?php echo $country; ?>">
+<input type="text" id="order_country" class="form-control" placeholder="Sri Lanka" name="txtcountry" value="<?php echo $country; ?>">
 </div>
 </div>
 <div class="col-xs-6">
@@ -211,50 +211,4 @@ if (mysqli_query($connect,$sql))
             </div>
         </div>
     </div>
-
-    <script>
-
-    function ValidateText (id)
-    {
-      if($("#"+id).val()==null || $("#"+id).val()=="" )
-      {
-        var div = $("#"+id).closest("div");
-        div.addclass("has-error");
-        return false;
-      }
-      else
-      {
-        var div = $("#"+id).closest("div");
-        div.removeclass("has-error");
-        return true;
-      }
-    }
-    $(document).ready(
-
-      function()
-      {
-        $("#order_btn").click(function()
-          {
-              if(!ValidateText("order_br"))
-              {
-                return false;
-              }
-              if(!ValidateText("order_company"))
-              {
-                return false;
-              }
-              if(!ValidateText("order_country"))
-              {
-                return false;
-              }
-              if(!ValidateText("order_domain"))
-              {
-                return false;
-              }
-
-              $("form#orderform").submit();
-          }
-          );
-      }
-    );
-    </script>
+</div>

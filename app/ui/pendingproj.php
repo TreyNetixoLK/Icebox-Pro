@@ -14,18 +14,18 @@ error_reporting(0); ?>
             <div class="panel-body">
               <?php include ("app/appdata/general.php"); ?>
               <div class="col-md-4">
-              <form action="" method="post">
+              <form action="" method="post" data-parsley-validate="">
  	<div class="form-group">
       <label for="disabledSelect">Netixo Reference</label>
  	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtnref">
     </div>
     <div class="form-group">
       <label for="disabledSelect">Schedule Completion Date (ETA)</label>
- 	  <input type="date" id="disabledTextInput" class="form-control" placeholder="" name="txtdate">
+ 	  <input type="date" id="disabledTextInput" class="form-control" placeholder="" name="txtdate" required="">
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Project Engineer</label>
-      <select class="form-control" name="projeng">
+      <select class="form-control" name="projeng" required="">
         <option></option>
     	<?php
 

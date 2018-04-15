@@ -16,33 +16,40 @@ error_reporting(0);
             <div class="panel-body">
               <?php include ("app/appdata/general.php"); ?>
 
-     <br /><br />
+     <br />
+     <div class="alert alert-warning" role="alert">
+  <h5><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;<strong>Warning</strong></h5>
+  <p>Make sure that you enter accurate details when creating servers on the system. Once the details are entered, they cannot be changed.</p>
+  <p>If a server was created with incorrect information. Please raise a bug to the developers immediately.</p>
+    </div>
+     <br />
+
      <div class="row">
-     <form class="form-horizontal" action="" method="post">
+     <form class="form-horizontal" action="" method="post" data-parsley-validate="">
      <div class="col-sm-6">
 
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">Server Name</label>
      <div class="col-sm-6">
-     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtservern">
+     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtservern" required="">
      </div>
      </div>
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">Service Provider</label>
      <div class="col-sm-6">
-     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtprovider">
+     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtprovider" required="">
      </div>
      </div>
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">Allocated Capacity</label>
      <div class="col-sm-6">
-     <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txtallocap">
+     <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txtallocap" required="">
      </div>
      </div>
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">Allocated Bandwith</label>
      <div class="col-sm-6">
-     <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txtband">
+     <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txtband" required="">
      </div>
      </div>
      </div>
@@ -52,19 +59,19 @@ error_reporting(0);
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">DNS Server [Primary]</label>
      <div class="col-sm-6">
-     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns1">
+     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns1" required="">
      </div>
      </div>
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">DNS Server [Redundant]</label>
      <div class="col-sm-6">
-     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns2">
+     <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns2" required="">
      </div>
      </div>
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">Platform</label>
      <div class="col-sm-6">
-       <select class="form-control" name="txtplat">
+       <select class="form-control" name="txtplat" required="">
        <option></option>
        <option>Plesk</option>
        <option>Cpanel</option>
@@ -77,7 +84,7 @@ error_reporting(0);
      <div class="form-group">
      <label for="inputEmail3" class="col-sm-4 control-label">Service Status</label>
      <div class="col-sm-6">
-     <select class="form-control" name="txtstat">
+     <select class="form-control" name="txtstat" required="">
      <option></option>
      <option>Active</option>
      <option>Inactive</option>

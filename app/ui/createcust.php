@@ -22,7 +22,7 @@ error_reporting(0);
   </div>
   <div class="form-group">
   <label for="disabledTextInput">Email Address</label>
-  <input type="email" id="disabledTextInput" class="form-control" placeholder="emal@domain.com" name="txtemail" data-parsley-type="email">
+  <input type="email" id="disabledTextInput" class="form-control" placeholder="emal@domain.com" name="txtemail" data-parsley-trigger="change" required="">
   </div>
   <div class="form-group">
   <label for="disabledTextInput">NIC No</label>

@@ -82,12 +82,12 @@ error_reporting(0);
           <div class="col-xs-12">
           <div class="form-group">
             <label for="disabledTextInput">Requirement</label>
-            <textarea class="form-control" rows="3" data-length="800" placeholder="Please describe the customers requirement" name="description" data-parsley-required=""></textarea>
+            <textarea class="form-control" rows="3" data-length="800" placeholder="Please describe the customers requirement" name="description" required=""></textarea>
               </div></div>
               <div class="col-xs-12">
               <div class="form-group">
                 <label for="disabledTextInput">Price</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="3200.00" name="price" data-parsley-required="">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="3200.00" name="price" required="">
                   </div>
                   <input type="hidden" class="form-control" name="domain" value="<?php echo $domain; ?>" id="exampleFormControlInput1">
                   <input type="hidden" class="form-control" name="type" value="<?php echo $ordtype; ?>" id="exampleFormControlInput1">

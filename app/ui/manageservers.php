@@ -61,7 +61,7 @@ error_reporting(0);
             <div class="panel-body">
                 <?php include ("app/appdata/general.php"); ?>
               <div align="center">
-              <form class="form-inline" method="post" action="">
+              <form class="form-inline" method="post" action="" data-parsley-validate="">
          <div class="form-group">
 <input type="text" id="disabledTextInput" class="form-control" placeholder="Reference without the prefix 'N'" style="width: 250px;" name ="txtsearch" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>"> &nbsp;
 <button type="submit" class="btn btn-primary" name="btn_search">Search</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -86,31 +86,31 @@ error_reporting(0);
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Hosting Space</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txthost" value="<?php echo $hostingspace; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txthost" value="<?php echo $hostingspace; ?>" required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Bandwith</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txtbandwith" value="<?php echo $bandwith; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="Values in MB" name="txtbandwith" value="<?php echo $bandwith; ?>" required ="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Email Accounts</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtemails" value="<?php echo $email; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtemails" value="<?php echo $email; ?>" required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Main IP Address</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="Eg: 192.168.1.1" name="txtip" value="<?php echo $mainip; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="Eg: 192.168.1.1" name="txtip" value="<?php echo $mainip; ?>" required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Server Name</label>
        <div class="col-sm-6">
-       <select class="form-control" name="txtserver" width="200px">
+       <select class="form-control" name="txtserver" width="200px" required="">
        <option></option>
        <?php
 
@@ -130,7 +130,7 @@ error_reporting(0);
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Service Status</label>
        <div class="col-sm-6">
-         <select class="form-control" name="txtstat">
+         <select class="form-control" name="txtstat" required="">
          <option></option>
          <option <?php if (!empty($Nstatus) && $Nstatus == 'Active')  echo 'selected = "selected"'; ?>>Active</option>
          <option <?php if (!empty($Nstatus) && $Nstatus == 'Cancelled')  echo 'selected = "selected"'; ?>>Cancelled</option>
@@ -145,37 +145,37 @@ error_reporting(0);
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">CPanel Username</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtcpuname"  value="<?php echo $cpanelun; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtcpuname"  value="<?php echo $cpanelun; ?>"required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">CPanel Password</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtcpwrod"  value="<?php echo $cpanelpw; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtcpwrod"  value="<?php echo $cpanelpw; ?>" required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">CPanel Portal URL</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="https://" name="txturl"  value="<?php echo $cpanelurl; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="https://" name="txturl"  value="<?php echo $cpanelurl; ?>" required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">DNS Server [Primary]</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns1"  value="<?php echo $DDNS1; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns1"  value="<?php echo $DDNS1; ?>" required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">DNS Server [Redundant]</label>
        <div class="col-sm-6">
-       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns2"  value="<?php echo $DDNS2; ?>">
+       <input type="text" class="form-control" id="inputEmail3" placeholder="" name="txtdns2"  value="<?php echo $DDNS2; ?>" required="">
        </div>
        </div>
        <div class="form-group">
        <label for="inputEmail3" class="col-sm-4 control-label">Platform</label>
        <div class="col-sm-6">
-       <select class="form-control" name="txtplat">
+       <select class="form-control" name="txtplat" required="">
        <option></option>
        <option <?php if (!empty($Platform) && $Platform == 'Cpanel')  echo 'selected = "selected"'; ?>>Cpanel</option>
        <option <?php if (!empty($Platform) && $Platform == 'Plesk')  echo 'selected = "selected"'; ?>>Plesk</option>

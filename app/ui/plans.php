@@ -16,26 +16,26 @@ error_reporting(0);
             <div class="panel-body">
             <?php include ("app/appdata/general.php"); ?>
  <div class="col-md-5">
-              <form action="" method="post">
+              <form action="" method="post" data-parsley-validate="">
  	<div class="form-group">
       <label for="disabledSelect">Plan Name</label>
- 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtpname">
+ 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtpname" required="">
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Wholesale Reference</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtwref">
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtwref" required="">
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Alllocated Hosting Space [MB]</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txthostspc">
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txthostspc" required="">
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Allocated Bandwith [MB]</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtbandwith">
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtbandwith" required="">
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Contract Term</label>
-      <select id="disabledSelect" class="form-control" name="txtcontractterm">
+      <select id="disabledSelect" class="form-control" name="txtcontractterm" required="">
       <option></option>
       <option>12 Months</option>
       <option>24 Months</option>
@@ -44,7 +44,7 @@ error_reporting(0);
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Price</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Sri Lankan Rupees" name="txtprice">
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Sri Lankan Rupees" name="txtprice" required="">
     </div>
 
     <div align="center">
