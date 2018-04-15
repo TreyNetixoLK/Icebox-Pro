@@ -56,9 +56,10 @@ error_reporting(0);
 
         <div class="row cm-fix-height">
         </div>
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
 
             <div class="panel-body">
+              <br />
                 <?php include ("app/appdata/general.php"); ?>
               <div align="center">
               <form class="form-inline" method="post" action="" data-parsley-validate="">
@@ -78,7 +79,7 @@ error_reporting(0);
 <?php  echo $msg; ?>
 </div>
 
-       <br /><br /><br />
+       <br />
        <div class="row">
        <form class="form-horizontal" action="" method="post">
        <div class="col-sm-6">

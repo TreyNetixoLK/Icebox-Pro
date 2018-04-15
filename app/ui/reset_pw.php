@@ -16,12 +16,12 @@
 
 	<br />
 	<div style="width: 800px;">
-		<form class="form-horizontal" method="post" action="">
+		<form class="form-horizontal" method="post" action="" data-parsley-validate="">
 
   <div class="form-group">
      <label for="inputPassword3" class="col-sm-2 control-label">Username</label>
       <div class="col-sm-10">
-     <select class="form-control" name="txtuser">
+     <select class="form-control" name="txtuser" >
         <option></option>
     	<?php
 
@@ -41,13 +41,13 @@
    <div class="form-group">
     <label for="inputPassword3" class="col-sm-2 control-label">New Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" name="txtpword">
+      <input type="password" class="form-control" id="inputPassword3" name="txtpword" required="">
     </div>
   </div>
   <div class="form-group">
     <label for="inputPassword3" class="col-sm-2 control-label">Confirm New Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" name="txtconfirm" >
+      <input type="password" class="form-control" id="inputPassword3" name="txtconfirm" required="">
     </div>
   </div>
   <div class="form-group" align="center">

@@ -15,30 +15,30 @@ error_reporting(0);
 
             <div class="panel-body">
 <?php include ("app/appdata/general.php"); ?>
-	<form action="" method="post">
+	<form action="" method="post" data-parsley-validate="">
 <div class="form-group">
       <label for="disabledSelect">Full Name</label>
- 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtfname">
+ 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtfname" required="">
     </div>
 	<div class="form-group">
       <label for="disabledSelect">Designation</label>
- 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtdesign">
+ 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtdesign" required="">
     </div>
     <div class="form-group">
       <label for="disabledSelect">Email Address</label>
- 	  <input type="email" id="disabledTextInput" class="form-control" placeholder="" name="txtemail">
+ 	  <input type="email" id="disabledTextInput" class="form-control" placeholder="" name="txtemail" required="">
     </div>
  	<div class="form-group">
       <label for="disabledSelect">Username</label>
- 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtuname">
+ 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtuname" required="">
     </div>
     <div class="form-group">
       <label for="disabledSelect">Password</label>
- 	  <input type="password" id="disabledTextInput" class="form-control" placeholder="" name="txtpword">
+ 	  <input type="password" id="disabledTextInput" class="form-control" placeholder="" name="txtpword" required="">
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Access Level</label>
-      <select class="form-control" name="projeng">
+      <select class="form-control" name="projeng" required="">
         <option></option>
     	<option>Administrator</option>
     	<option>Engineer</option>

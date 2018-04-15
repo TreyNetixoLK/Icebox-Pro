@@ -18,6 +18,7 @@ error_reporting(0);
 
      <br />
      <div class="alert alert-warning" role="alert">
+    <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
   <h5><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;<strong>Warning</strong></h5>
   <p>Make sure that you enter accurate details when creating servers on the system. Once the details are entered, they cannot be changed.</p>
   <p>If a server was created with incorrect information. Please raise a bug to the developers immediately.</p>

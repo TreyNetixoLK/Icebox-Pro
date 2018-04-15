@@ -44,7 +44,6 @@
                 <li class="cm-submenu">
                     <a class="sf-terminal">Devops Management <span class="caret"></span></a>
                     <ul>
-                        <li><a href="main.php?page=bugreport">Development Requests</a></li>
                         <li><a href="https://devops.netixo.lk/mantis/login_page.php" target="_blank">Mantis BT</a></li>
                     </ul>
                 </li>
