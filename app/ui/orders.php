@@ -266,7 +266,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
                   </tr>
                   <tr>
                     <td><strong>Plan Name</strong></td>
-                    <td><?php echo $plan; ?></td>
+                    <td><a href="" data-toggle="modal" data-target=".bs-example-modal-lg"><?php echo $plan; ?></a></td>
                     <td><strong>Contract Term</strong></td>
                     <td><?php echo $cterm; ?></td>
                   </tr>
@@ -311,6 +311,13 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
                 </table>
                 </div>
                 <!-- end of Order Information -->
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
               </div>
               <br />
               <div class="col-md-12">
@@ -520,3 +527,8 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
             </div>
         </div>
     </div>
+<script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+</script>
