@@ -97,3 +97,71 @@ error_reporting(0);
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+
+        <div class="row cm-fix-height">
+        </div>
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <div class="col-md-12 text-center article-v1-title"></div>
+              <br />
+              <div class="col-md-12  article-v1-body">
+              <div align="center">
+                <h2>All Orders</h2>
+              </div>
+              <br />
+
+              <?php
+
+              echo      "<table class='table table-bordered table-hover table-striped'>";
+              echo      "      <thead>";
+              echo      "      <tr>";
+              echo      "      <th>Order Reference</th>";
+              echo      "      <th>Customer Name</th>";
+              echo      "      <th>Order Type</th>";
+              echo      "      <th>Plan Name</th>";
+              echo      "      <th>Account Manager</th>";
+              echo      "      <th>Status</th>";
+              echo      "      <th>Action</th>";
+              echo      "      </tr>";
+              echo      "      </thead>";
+              echo      "      <tbody>";
+
+
+                  $sql78="SELECT * FROM tbl_orders";
+                  $records =mysqli_query($connect,$sql78);
+                    while($package=mysqli_fetch_assoc($records))
+                      {
+                    echo "<tr>";
+                    echo "<td>".$package["OrderID"]."</td>";
+                    echo "<td>".$package["CustName"]."</td>";
+                    echo "<td>".$package["OrdType"]."</td>";
+                    echo "<td>".$package["HostingPlan"]."</td>";
+                    echo "<td>".$package["Createdby"]."</td>";
+                    echo "<td>".$package["Status"]."</td>";
+                    echo "<td align='center'><form method='post' action='main.php?page=orders'>
+                    <input type='hidden' id='disabledTextInput' value=".$package['OrderID']." class='form-control' name='txtordernumber' readonly>
+                    <button type='submit' class='btn btn-default' name='btn_view'>View Order</button>
+                    </form></td>";
+                    echo "</tr>";
+                      } // end While loop
+                      echo      "      </tbody>";
+                      echo      "      </table>";
+
+
+              ?>
+            </tbody>
+            </table>
+              <!-- end of Progress Bar -->
+              </div>
+              <div class="col-md-12 article-v1-footer">
+
+
+              </div>
+
+            </div>
+        </div>
+    </div>
