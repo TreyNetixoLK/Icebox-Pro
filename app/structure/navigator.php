@@ -1,8 +1,8 @@
 <?php include('app/appdata/hunter.php')?>
 
-<nav class="cm-navbar cm-navbar-primary">
+<nav class="cm-navbar cm-navbar-midnight">
     <div class="cm-flex"><a href="index.html"><img src="assets/img/logo3_White.png" height="50px" width="100px"></a></div>
-    <div class="btn btn-primary md-menu-white" data-toggle="cm-menu"></div>
+    <div class="btn btn-midnight md-menu-white" data-toggle="cm-menu"></div>
 </nav>
 <div id="cm-menu-content">
     <div id="cm-menu-items-wrapper">
@@ -30,6 +30,7 @@
                         <li><a href="main.php?page=search">Search Project</a></li>
                         <li><a href="main.php?page=manageproj_new">Manage Project</a></li>
                         <li><a href="main.php?page=pendingproj">Pending Projects</a></li>
+                        <li><a href="https://trello.com/login" target="_blank">Project Board</a></li>
                     </ul>
                 </li>
                 <li class="cm-submenu">
@@ -51,6 +52,7 @@
                     <a class="sf-money">Finance Management <span class="caret"></span></a>
                     <ul>
                         <li><a href="main.php?page=plans">Plan & Pricing</a></li>
+                        <li><a href="https://avabill.netixo.lk/auth/login" target="_blank">Avabill</a></li>
                         <li><a href="https://www.sampathvishwa.com/SVRClientWeb/ActionController" target="_blank">Online Banking - Sampath Vishwa</a></li>
                     </ul>
                 </li>
@@ -75,23 +77,22 @@
 </div>
 </div>
 <header id="cm-header">
-    <nav class="cm-navbar cm-navbar-primary">
-        <div class="btn btn-primary md-menu-white hidden-md hidden-lg" data-toggle="cm-menu"></div>
+    <nav class="cm-navbar cm-navbar-midnight">
+        <div class="btn btn-midnight md-menu-white hidden-md hidden-lg" data-toggle="cm-menu"></div>
         <div class="cm-flex">
-            <h1>Home</h1>
             <form id="cm-search" action="index.html" method="get">
                 <input type="search" name="q" autocomplete="off" placeholder="Search...">
             </form>
         </div>
         <div class="pull-right">
-            <div id="cm-search-btn" class="btn btn-primary md-search-white" data-toggle="cm-search"></div>
+            <div id="cm-search-btn" class="btn btn-midnight md-search-white" data-toggle="cm-search"></div>
         </div>
 
         <div class="dropdown pull-right">
-            <button class="btn btn-primary md-account-circle-white" data-toggle="dropdown"></button>
+            <button class="btn btn-midnight md-account-circle-white" data-toggle="dropdown"></button>
             <ul class="dropdown-menu">
                 <li class="disabled text-center">
-                    <a style="cursor:default;"><strong>Hi&nbsp;<?php echo $fullname; ?> !!</strong></a>
+                    <a style="cursor:default;"><strong><?php echo $fullname; ?></strong><br /><i><?php echo $desg; ?></i></a>
                 </li>
                 <li class="divider"></li>
                 <li>
