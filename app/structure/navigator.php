@@ -20,6 +20,7 @@
                     <a class="sf-bag">Order Management <span class="caret"></span></a>
                     <ul>
                         <li><a href="main.php?page=neworder">Create a new Order</a></li>
+                        <li><a href="main.php?page=newagreement">Signup a new Agreement</a></li>
                         <li><a href="main.php?page=search">Search Order</a></li>
                         <li><a href="main.php?page=createquote">Generate Quotation</a></li>
                     </ul>
