@@ -49,7 +49,7 @@ error_reporting(0);
                                                $nic =$row[8];
                                                $contact =$row[9];
                                                $gitrepo =$row[15];
-
+                                               $comments =$row[24];
                                                $status =$row[30];
                                                $appraisal = $row[32];
                                                $uidesign = $row[33];
@@ -57,6 +57,8 @@ error_reporting(0);
                                                $develop = $row[35];
                                                $testing =$row[36];
                                                $completion =$row [37];
+                                               $eta = $row [40];
+                                               $engineer = $row [23];
 
                      }
                     }
@@ -89,7 +91,6 @@ error_reporting(0);
                 <input type="text" id="disabledTextInput" class="form-control" placeholder="https://" width="50" name="txtgiturl" value="<?php echo $gitrepo; ?>">
               </div>
 
-
               <div class="form-group">
               <label for="disabledTextInput">Status</label>
               <select id="disabledSelect" class="form-control" name="txtstatus" value="">
@@ -102,12 +103,27 @@ error_reporting(0);
               </select>
               </div>
 
+              <div class="form-group">
+                 <label for="disabledTextInput">Customer Requirement</label>
+                 <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="" readonly><?php echo $comments; ?></textarea>
+               </div>
+
+               <div class="form-group">
+                 <label for="disabledTextInput">Project Engineer</label>
+                 <input type="text" id="disabledTextInput" class="form-control" placeholder="" value="<?php echo $engineer; ?>" readonly>
+               </div>
+
               </div>
 
             <div class="col-xs-6">
             <div class="form-group">
               <label for="disabledTextInput">Customer / Company Name</label>
               <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtcompname" value="<?php echo $compname; ?>" readonly>
+            </div>
+
+            <div class="form-group">
+              <label for="disabledSelect">Estimated Completion Date (ETA)</label>
+            <input type="date" id="disabledTextInput" class="form-control" placeholder="" name="txteta" required="" value="<?php echo $eta;?>">
             </div>
 
              <div class="panel panel-info">
@@ -263,6 +279,7 @@ $db = $_POST['dbdesign'];
 $devop = $_POST['development'];
 $testing = $_POST['testing'];
 $completed = $_POST['completed'];
+$etadate = $_POST['txteta'];
 
 $resu = "";
 
@@ -273,6 +290,7 @@ $resu = "";
    development='$devop',
    testing='$testing',
    completion='$completed',
+   ETA = '$etadate',
 	Status='$status' WHERE OrderID='$search2'";
 
     if (mysqli_query($connect,$sql77))
@@ -298,38 +316,81 @@ $resu = "";
 
                 <div class="panel-body">
 
-                              <div class="panel panel-primary">
-                                  <div class="panel-body">
-                                  <form action="" method="post">
-                                       <input type="hidden" id="disabledTextInput" class="form-control" name="txtref" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>">
-                                       <label for="disabledTextInput">Add Comment</label>
-                                        <textarea class="form-control" rows="3" name="txtcomment"></textarea><br />
-                                        <div align="center">
-                                        <button type="submit" class="btn btn-primary" name="btn_addNote" >Save Comment</button></div>
-                                      </form>
-                                        <?php include ("app/appdata/connection.php"); ?>
-                                        <?php
-                                        $notes = $_POST ['txtcomment'];
-                                        $val = $_SESSION ['user'];
-                                        $Ref = $_POST['txtref'];
+                  <div align="center">
+                    <h3><strong>Project Notes</strong></h3>
+                    <br />
+                    <div align="center">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add New Comment</button></div>
+                    <br />
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Project Notes</h4>
+      </div>
+      <div class="modal-body">
 
-                                        if(isset ($_POST['btn_addNote']))
-                                        {
-                                        $sql3 = "insert into tbl_ordernotes(Nref,Username,comments) values ('$Ref','$val','$notes')";
+        <div class="panel panel-primary">
+            <div class="panel-body">
+            <form action="" method="post">
+                 <input type="hidden" id="disabledTextInput" class="form-control" name="txtref" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>">
+                 <label for="disabledTextInput">Add Comment</label>
+                  <textarea class="form-control" rows="3" name="txtcomment"></textarea><br />
+                  <div align="center">
+                  <button type="submit" class="btn btn-primary btn-lg" name="btn_addNote" >Save Comment</button></div>
+                </form>
+                  <?php include ("app/appdata/connection.php"); ?>
+                  <?php
+                  $notes = $_POST ['txtcomment'];
+                  $val = $_SESSION ['user'];
+                  $Ref = $_POST['txtref'];
 
-                                        if (mysqli_query($connect,$sql3))
-                                        {
+                  if(isset ($_POST['btn_addNote']))
+                  {
+                  $sql3 = "insert into tbl_ordernotes(Nref,Username,comments) values ('$Ref','$val','$notes')";
 
-                                        }
-                                        else{
-                                        $resu = mysqli_error($connect);
-                                        echo $resu;
-                                        }
-                                        }
-                                        ?>
+                  if (mysqli_query($connect,$sql3))
+                  {
+
+                  }
+                  else{
+                  $resu = mysqli_error($connect);
+                  echo $resu;
+                  }
+                  }
+                  ?>
 
 
 
-                </div>
-            </div>
+</div>
+</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- End of Modal -->
+                    <div class="responsive-table">
+    <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+    <thead>
+    <tr>
+    <th>Date and Time</th>
+    <th>user</th>
+    <th>Comments</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    </table>
+    </div>
+
+                  </div>
         </div>

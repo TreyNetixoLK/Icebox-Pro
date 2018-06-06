@@ -82,7 +82,7 @@
         <div class="btn btn-midnight md-menu-white hidden-md hidden-lg" data-toggle="cm-menu"></div>
         <div class="cm-flex">
             <form id="cm-search" action="index.html" method="get">
-                <input type="search" name="q" autocomplete="off" placeholder="Search...">
+                <input type="search" name="q" autocomplete="off" name="txtsearch" placeholder="Search order by Netixo Reference">
             </form>
         </div>
         <div class="pull-right">
