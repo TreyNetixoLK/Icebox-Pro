@@ -21,7 +21,7 @@
 <script src="assets/js/fastclick.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/clearmin.min.js"></script>
-<script src="assets/js/functions.js"></script>
 <script src="assets/js/demo/home.js"></script>
+<script src="assets/js/demo/popovers-tooltips.js"></script>
 </body>
 </html>

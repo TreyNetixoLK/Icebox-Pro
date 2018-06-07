@@ -266,7 +266,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
                   </tr>
                   <tr>
                     <td><strong>Plan Name</strong></td>
-                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"><?php echo $plan; ?></button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"><?php echo $plan; ?></button></td>
                     <td><strong>Contract Term</strong></td>
                     <td><?php echo $cterm; ?></td>
                   </tr>
