@@ -42,10 +42,6 @@ error_reporting(0);
                   $search =$_POST['txtsearch'];
                   $type = $_POST['txttype'];
 
-                  $sql78="SELECT * FROM tbl_orders WHERE $type='$search'";
-                  $records =mysqli_query($connect,$sql78);
-                    while($package=mysqli_fetch_assoc($records))
-                      {
                   echo      "<table class='table table-bordered table-hover table-striped'>";
                   echo      "      <thead>";
                   echo      "      <tr>";
@@ -59,6 +55,11 @@ error_reporting(0);
                   echo      "      </tr>";
                   echo      "      </thead>";
                   echo      "      <tbody>";
+
+                  $sql78="SELECT * FROM tbl_orders WHERE $type='$search'";
+                  $records =mysqli_query($connect,$sql78);
+                    while($package=mysqli_fetch_assoc($records))
+                      {
                     echo "<tr>";
                     echo "<td>".$package["OrderID"]."</td>";
                     echo "<td>".$package["CustName"]."</td>";
@@ -71,15 +72,15 @@ error_reporting(0);
                     <button type='submit' class='btn btn-default' name='btn_view'>View Order</button>
                     </form></td>";
                     echo "</tr>";
-                    echo      "      </tbody>";
-                    echo      "      </table>";
                       } // end While loop
 
+                    echo      "      </tbody>";
+                    echo      "      </table>";
 
                }
                else {
 
-                 $msg="<h3 align='center' style=color:red;>Not Found!</h3>";
+                 $msg="<h5 align='center' style=color:red;>Please enter a valid order reference</h5>";
                  //echo $msg;
 
                }

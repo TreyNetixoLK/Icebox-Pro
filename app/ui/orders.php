@@ -486,7 +486,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
 <tbody>
   <?php
 
-  	  $tbsql="SELECT * FROM tbl_ordernotes where Nref=$ordernumb";
+  	  $tbsql="SELECT * FROM tbl_ordernotes where Nref=$ordernumb and cmmnt_type='Public'";
 
   	  $records =mysqli_query($connect,$tbsql);
         while($package=mysqli_fetch_assoc($records))

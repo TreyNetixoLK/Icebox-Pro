@@ -324,14 +324,43 @@ $resu = "";
                     <br />
                     <div class="responsive-table">
     <table class="table table-striped table-bordered" width="100%" cellspacing="0">
-    <thead>
-    <tr>
-    <th>Date and Time</th>
-    <th>user</th>
-    <th>Comments</th>
-    </tr>
-    </thead>
-    <tbody>
+      <?php
+         if($ordid == "")
+         {
+
+         }
+         else {
+
+           echo"<thead>";
+           echo "<tr>";
+           echo "<th>Date and Time</th>";
+           echo "<th>Type</th>";
+           echo "<th>user</th>";
+           echo "<th>Comments</th>";
+           echo "</tr>";
+           echo"<thead>";
+           echo "<tbody>";
+           $tbsql="SELECT * FROM tbl_ordernotes where Nref=$ordid and cmmnt_type!='Network'";
+
+           $records =mysqli_query($connect,$tbsql);
+           while($package=mysqli_fetch_assoc($records))
+               {
+
+             echo "<tr>";
+             echo "<td>".$package["date"]."</td>";
+             echo "<td>".$package["cmmnt_type"]."</td>";
+             echo "<td>".$package["Username"]."</td>";
+             echo "<td>".$package["comments"]."</td>";
+             echo "</tr>";
+
+
+               } // end While loop
+         }
+
+          echo "</tbody>";
+
+
+      	  ?>
 
     </tbody>
     </table>
