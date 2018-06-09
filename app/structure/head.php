@@ -8,9 +8,11 @@
         <link rel="stylesheet" type="text/css" href="assets/css/material-design.css">
         <link rel="stylesheet" type="text/css" href="assets/css/small-n-flat.css">
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-          <link rel="stylesheet" type="text/css" href="assets/css/parsley.css">
+         <link rel="stylesheet" type="text/css" href="assets/css/parsley.css">
 
         <title>ICEBOX Pro</title>
+
     </head>
+
     <body class="cm-no-transition cm-1-navbar">
         <div id="cm-menu">

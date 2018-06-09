@@ -52,7 +52,7 @@ error_reporting(0);
                		   }
                		  else
                		   {
-               			  $msg="<h3 style=color:red;>Not Found!</h3>";
+               			  $msg="<h6 style=color:red;><strong>Unable to find customer details. Plesae recheck the ID number and try again.</strong></h6>";
                       echo $msg;
                		   }
 
@@ -65,7 +65,6 @@ error_reporting(0);
                	}
                	?>
               </div>
-              <br />
               <form action="" method="post">
             <div class="col-xs-6">
             <div class="form-group">

@@ -14,13 +14,13 @@
                     <ul>
                         <li><a href="main.php?page=createcust">Create Customer Profile</a></li>
                         <li><a href="main.php?page=editcust">Edit Customer Details</a></li>
+                        <li><a href="main.php?page=allcustomers">Customer List</a></li>
                     </ul>
                 </li>
                 <li class="cm-submenu">
                     <a class="sf-bag">Sales Management <span class="caret"></span></a>
                     <ul>
                         <li><a href="main.php?page=neworder">Create a new Order</a></li>
-                        <li><a href="main.php?page=newagreement">New Agreement</a></li>
                         <li><a href="main.php?page=search">Search Order</a></li>
                         <li><a href="main.php?page=createquote">Generate Quotation</a></li>
                     </ul>

@@ -137,7 +137,7 @@ $sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Ord_Rec_Date='$date;'";
                                    </div>
                                    <div class="col-xs-9 text-right">
                                        <div><h2><?php echo $Sale; ?></h2></div>
-                                       <div>Total Sales for the day </div>
+                                       <div>Daily Sales </div>
                                    </div>
                                </div>
                            </div>
@@ -200,7 +200,7 @@ $sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Ord_Rec_Date='$date;'";
                    <div class="col-lg-4">
                        <div class="panel panel-default">
                            <div class="panel-heading">
-                               <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn"> Ongoing Projects</h3>
+                               <h3 class="panel-title">  <img src="assets/img/sf/folder.svg" alt="folder"> Ongoing Projects</h3>
                            </div>
                            <div class="panel-body">
                              <?php
@@ -233,7 +233,7 @@ echo "</div>";
                    <div class="col-lg-8">
                        <div class="panel panel-default">
                            <div class="panel-heading">
-                               <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> My Pending Orders</h3>
+                               <h3 class="panel-title"><img src="assets/img/sf/layers.svg" alt="layers"> Pending Orders</h3>
                            </div>
                            <div class="panel-body">
                                <div class="table-responsive">
@@ -245,7 +245,6 @@ echo "</div>";
                                                <th>Order Type</th>
                                                <th>Plan Name</th>
                                                <th>Account Manager</th>
-                                               <th>Status</th>
                                            </tr>
                                        </thead>
                                        <tbody>
@@ -263,7 +262,6 @@ echo "</div>";
      echo "<td>".$package["OrdType"]."</td>";
      echo "<td>".$package["HostingPlan"]."</td>";
      echo "<td>".$package["Createdby"]."</td>";
-     echo "<td>".$package["Status"]."</td>";
      echo "</tr>";
 
        } // end While loop
@@ -277,6 +275,42 @@ echo "</div>";
                    </div>
                </div>
                <!-- /.row -->
+
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn">Outage Notifications</h3>
+                    </div>
+                    <div class="panel-body">
+                      <?php
+
+
+$tbsql879="SELECT * FROM tbl_orders where Status = 'Progressing'";
+
+$records =mysqli_query($connect,$tbsql879);
+while($package=mysqli_fetch_assoc($records))
+{
+echo "<div class='panel panel-primary'>";
+echo "<div class='panel-body'>";
+echo "<h4 align='center'><b>#N".$package["OrderID"]."&nbsp-&nbsp".$package["CustName"]."</b></h4>";
+echo "<p><b>Assigned Engineer :&nbsp</b>".$package["ProjectEngineer"]."</p>";
+echo "<p><b>ETA :&nbsp</b>".$package["ETA"]."</p>";
+echo "</div>";
+echo "</div>";
+} // end While loop
+
+?>
+                       <div class="list-group">
+
+
+
+        </div>
+                    </div>
+                </div>
+            </div>
+
+          </div>
 
            </div>
            <!-- /.container-fluid -->

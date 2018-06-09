@@ -22,7 +22,6 @@ error_reporting(0);
               <input type="text" id="disabledTextInput" class="form-control" placeholder="Reference without the prefix 'N'" style="width: 300px;" name="txtsearch" value="<?php if(isset($_POST['txtsearch'])){ echo($_POST['txtsearch']); } ?>"> &nbsp;<button type="submit" class="btn btn-primary" name="btn_Search">Search</button>
                </form>
               </div>
-              <br />
               <?php
 
 
@@ -64,7 +63,7 @@ error_reporting(0);
                     }
                    else
                     {
-                     $msg="<h3 style=color:red;>Not Found!</h3>";
+                     $msg="<div align='center'><h5 style=color:red;>Invalid Order Reference. Please enter a valid order reference and try again.</h5></div>";
                      echo $msg;
                     }
 
@@ -76,6 +75,7 @@ error_reporting(0);
                   }
                }
                ?>
+               <br />
                <form method="post" action="">
               <div class="col-xs-6">
               <div class="form-group">
@@ -105,7 +105,7 @@ error_reporting(0);
 
               <div class="form-group">
                  <label for="disabledTextInput">Customer Requirement</label>
-                 <textarea class="form-control" rows="3" name="txtcomments" data-length="800" placeholder="" readonly><?php echo $comments; ?></textarea>
+                 <textarea class="form-control" rows="4" name="txtcomments" data-length="800" placeholder="" readonly><?php echo $comments; ?></textarea>
                </div>
 
                <div class="form-group">
@@ -295,7 +295,7 @@ $resu = "";
 
     if (mysqli_query($connect,$sql77))
 	{
-		$resu = "<div class='alert alert-success' role='alert'>Records have been updated.</div>";
+		$resu = "<div class='alert alert-success' role='alert'>Records have been updated successfully.</div>";
 		echo $resu;
 	}
 	else{
@@ -320,47 +320,8 @@ $resu = "";
                     <h3><strong>Project Notes</strong></h3>
                     <br />
                     <div align="center">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#commentModal">Add New Comment</button></div>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add New Comment</button></div>
                     <br />
-                    <!-- Modal -->
-                    <div id="commentModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                        <h4 class="modal-title" id="myModalLabel">
-                            Modal title
-                        </h4>
-                    </div>
-                    <div class="modal-body">
-                        <h4 id="text-in-a-modal">
-                            Text in a modal
-                            <a class="anchorjs-link" href="#text-in-a-modal"><span class="anchorjs-icon"></span></a>
-                        </h4>
-                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                        <hr>
-                        <h4 id="popover-in-a-modal">
-                            Popover in a modal
-                            <a class="anchorjs-link" href="#popover-in-a-modal"><span class="anchorjs-icon"></span></a>
-                        </h4>
-                        <p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
-                        <hr>
-                        <h4 id="tooltips-in-a-modal">
-                            Tooltips in a modal
-                            <a class="anchorjs-link" href="#tooltips-in-a-modal"><span class="anchorjs-icon"></span></a>
-                        </h4>
-                        <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-            <!-- End of Modal -->
                     <div class="responsive-table">
     <table class="table table-striped table-bordered" width="100%" cellspacing="0">
     <thead>
@@ -376,5 +337,47 @@ $resu = "";
     </table>
     </div>
 
-                  </div>
+    </div>
         </div>
+      </div>
+    </div>
+    <!-- Modal Start -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <h4 class="modal-title" id="myModalLabel">
+                                    Modal title
+                                    <a class="anchorjs-link" href="#myModalLabel"><span class="anchorjs-icon"></span></a>
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4 id="text-in-a-modal">
+                                    Text in a modal
+                                    <a class="anchorjs-link" href="#text-in-a-modal"><span class="anchorjs-icon"></span></a>
+                                </h4>
+                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                <hr>
+                                <h4 id="popover-in-a-modal">
+                                    Popover in a modal
+                                    <a class="anchorjs-link" href="#popover-in-a-modal"><span class="anchorjs-icon"></span></a>
+                                </h4>
+                                <p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+                                <hr>
+                                <h4 id="tooltips-in-a-modal">
+                                    Tooltips in a modal
+                                    <a class="anchorjs-link" href="#tooltips-in-a-modal"><span class="anchorjs-icon"></span></a>
+                                </h4>
+                                <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+    <!-- Modal End -->

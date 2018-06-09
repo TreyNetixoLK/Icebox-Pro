@@ -28,7 +28,8 @@ error_reporting(0);
     <div class="col-md-10">
 
     <!-- Starting Template Page 01 from Here -->
-     <table border="0" width="700px" height="1400px" style="font-family:Ubuntu;">
+    <font face="Verdana">
+     <table border="0" width="700px" height="1400px">
         <tr>
          <td height="100px"><img src="imgs/logo3.png" style="width:195px; height:100px;"></td>
         </tr>
@@ -99,7 +100,7 @@ error_reporting(0);
                 <td><br />If you are happy to proceed with this proposal. Please forward this quotation with your approval to <a href="mailto:sales@netixo.lk">sales@netixo.lk</a> within 10 working days.</td>
                </tr>
                <tr>
-                 <td><br />
+                 <td><br /></td></font>
                 </tr>
                <tr>
                  <td align='center' style="color:#B0ADAC; font-family:Ubuntu;"><i>This is a system generated document. Therefore signature not required.</i></td>
