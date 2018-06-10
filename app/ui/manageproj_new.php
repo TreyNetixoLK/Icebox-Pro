@@ -1,7 +1,7 @@
 <?php include ("app/appdata/connection.php"); ?>
 <?php
 // Turn off all error reporting
-error_reporting(0);
+ error_reporting(0);
 ?>
 
 <div id="global">
@@ -320,7 +320,10 @@ $resu = "";
                     <h3><strong>Project Notes</strong></h3>
                     <br />
                     <div align="center">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add New Comment</button></div>
+                      <form method="post" action="main.php?page=comment">
+                      <input type="hidden" id="disabledTextInput" class="form-control" name="txtordno1" value="<?php echo $search2; ?>" readonly>
+                      <button type="submit" class="btn btn-primary btn-lg" value="<?php echo $search2; ?>" name="btn_comment">Add New Comment</button></div>";
+                    </form>
                     <br />
                     <div class="responsive-table">
     <table class="table table-striped table-bordered" width="100%" cellspacing="0">
@@ -335,7 +338,7 @@ $resu = "";
            echo "<tr>";
            echo "<th>Date and Time</th>";
            echo "<th>Type</th>";
-           echo "<th>user</th>";
+           echo "<th>Username</th>";
            echo "<th>Comments</th>";
            echo "</tr>";
            echo"<thead>";
@@ -370,43 +373,3 @@ $resu = "";
         </div>
       </div>
     </div>
-    <!-- Modal Start -->
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                <h4 class="modal-title" id="myModalLabel">
-                                    Modal title
-                                    <a class="anchorjs-link" href="#myModalLabel"><span class="anchorjs-icon"></span></a>
-                                </h4>
-                            </div>
-                            <div class="modal-body">
-                                <h4 id="text-in-a-modal">
-                                    Text in a modal
-                                    <a class="anchorjs-link" href="#text-in-a-modal"><span class="anchorjs-icon"></span></a>
-                                </h4>
-                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                                <hr>
-                                <h4 id="popover-in-a-modal">
-                                    Popover in a modal
-                                    <a class="anchorjs-link" href="#popover-in-a-modal"><span class="anchorjs-icon"></span></a>
-                                </h4>
-                                <p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
-                                <hr>
-                                <h4 id="tooltips-in-a-modal">
-                                    Tooltips in a modal
-                                    <a class="anchorjs-link" href="#tooltips-in-a-modal"><span class="anchorjs-icon"></span></a>
-                                </h4>
-                                <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-    <!-- Modal End -->
