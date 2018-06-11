@@ -15,20 +15,9 @@ function admin_protect()
 
         if ($users == "User")
 		{
-			echo ("<div class='row'>
-                      <div class='col-md-6 col-md-offset-3'>
-                        <div class='jumbotron' align='center'>
-					    <h2><b>Oops!!</b>,You are not authorised to be here.</h2>
-					    <br />
-					     <p>Access to this page have been restricted by the System Administrator.</p>
-							 <br />
-							 <div align='center'>
-							 <h3><span class='label label-danger'>Click on Dashboard to Leave</span></h3>
-							 </div>
-					    </div>
-					  </div>
-					 </div>");
-			exit();
+				header("Location:main.php?page=restricted");
+
+		
 		}
 
 	}

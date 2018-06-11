@@ -280,7 +280,7 @@ echo "</div>";
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn">Outage Notifications</h3>
+                        <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn"> Current Outages</h3>
                     </div>
                     <div class="panel-body">
                       <?php

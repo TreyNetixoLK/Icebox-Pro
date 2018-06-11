@@ -36,7 +36,7 @@ error_reporting(0);
       }
      else
       {
-       $msg="<h3 style=color:red;>Not Found!</h3>";
+       $msg="<h4 style=color:red;>Invalid order reference. Please check the reference and try again.</h4>";
 
       }
 
@@ -247,3 +247,79 @@ error_reporting(0);
      </div>
             </div>
         </div>
+      </div>
+
+      <div class="container-fluid">
+
+          <div class="row cm-fix-height">
+          </div>
+          <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div align="center">
+                  <h3><strong>Network Notes</strong></h3>
+                  <br />
+                  <div align="center">
+                    <?php
+
+                    if ($search == "")
+                    {
+
+                    }
+                    else
+                    {
+                      echo "<form method='post' action='main.php?page=comment' target='_blank'>";
+                      echo "<input type='hidden' id='disabledTextInput' class='form-control' name='txtordno1' value='$search' readonly>";
+                      echo "<button type='submit' class='btn btn-primary btn-lg' name='btn_comment'>Add New Comment</button></div>";
+                      echo "</form>";
+                    }
+
+                     ?>
+                  <br />
+                  <div class="responsive-table">
+  <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+    <?php
+       if($search == "")
+       {
+
+       }
+       else {
+
+         echo"<thead>";
+         echo "<tr>";
+         echo "<th>Date and Time</th>";
+         echo "<th>Username</th>";
+         echo "<th>Comments</th>";
+         echo "</tr>";
+         echo"<thead>";
+         echo "<tbody>";
+         $tbsql="SELECT * FROM tbl_ordernotes where Nref=$search and cmmnt_type ='Network'";
+
+         $records =mysqli_query($connect,$tbsql);
+         while($package=mysqli_fetch_assoc($records))
+             {
+
+           echo "<tr>";
+           echo "<td>".$package["date"]."</td>";
+           echo "<td>".$package["Username"]."</td>";
+           echo "<td>".$package["comments"]."</td>";
+           echo "</tr>";
+
+
+             } // end While loop
+       }
+
+        echo "</tbody>";
+
+
+        ?>
+
+  </tbody>
+  </table>
+  </div>
+
+  </div>
+      </div>
+    </div>
+  </div>
