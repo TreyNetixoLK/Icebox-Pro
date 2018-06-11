@@ -317,13 +317,24 @@ $resu = "";
                 <div class="panel-body">
 
                   <div align="center">
-                    <h3><strong>Project Notes</strong></h3>
+                    <h3><strong>Project History</strong></h3>
                     <br />
                     <div align="center">
-                      <form method="post" action="main.php?page=comment">
-                      <input type="hidden" id="disabledTextInput" class="form-control" name="txtordno1" value="<?php echo $search2; ?>" readonly>
-                      <button type="submit" class="btn btn-primary btn-lg" value="<?php echo $search2; ?>" name="btn_comment">Add New Comment</button></div>";
-                    </form>
+                      <?php
+
+                      if ($ordid == "")
+                      {
+
+                      }
+                      else
+                      {
+                        echo "<form method='post' action='main.php?page=comment' target='_blank'>";
+                        echo "<input type='hidden' id='disabledTextInput' class='form-control' name='txtordno1' value='$ordid' readonly>";
+                        echo "<button type='submit' class='btn btn-primary btn-lg' name='btn_comment'>Add New Comment</button></div>";
+                        echo "</form>";
+                      }
+
+                       ?>
                     <br />
                     <div class="responsive-table">
     <table class="table table-striped table-bordered" width="100%" cellspacing="0">

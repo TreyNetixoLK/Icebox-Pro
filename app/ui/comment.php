@@ -3,7 +3,7 @@
 // Turn off all error reporting
 error_reporting(0);
 
-$ordernumb = $_POST[txtordno1];
+$ordernumber = $_POST[txtordno1];
 ?>
 
 <div id="global">
@@ -25,8 +25,7 @@ $ordernumb = $_POST[txtordno1];
                     <div class="col-md-4">
                       <form method="post" action="">
                       <div class="form-group">
-                         <label for="disabledTextInput">Order Reference</label>
-                         <input type="text" id="disabledTextInput" class="form-control" width="50" name="txtgiturl" value="<?php ?>" readonly>
+                         <input type="hidden" id="disabledTextInput" class="form-control" width="50" name="txtordernum" value="<?php echo $ordernumber; ?>" readonly>
                        </div>
                        <div class="form-group">
                        <label for="disabledSelect">Comment Type</label>
@@ -40,12 +39,35 @@ $ordernumb = $_POST[txtordno1];
                           <label for="disabledTextInput">Comment</label>
                           <textarea class="form-control" rows="6" name="txtcomments" data-length="800" placeholder=""></textarea>
                         </div>
-                    <button type="button" class="btn btn-primary btn-lg">Save Comment</button>
+                    <button type="submit" class="btn btn-primary btn-lg" name="btn_save">Save Comment</button>
                   </form>
                   <br />
-                  <form method="post" action="">
-                    <input type="hidden" id="disabledTextInput" class="form-control" width="50" name="txtgiturl" value="<?php ?>" readonly>
-                    <button type="button" class="btn btn-success btn-lg">Go Back to Project</button>
+                  <?php
+                  $order = $_POST['txtordernum'];
+                  $type = $_POST['txtordtype'];
+                  $cmnt = $_POST['txtcomments'];
+                  $val = $_SESSION ['user'];
+
+                  $resu = "";
+                  $resu1="";
+
+                  if(isset ($_POST['btn_save']))
+                  {
+                    $sql3211 = "INSERT INTO tbl_ordernotes (Nref,Username,comments,cmmnt_type) VALUES ('$order','$val','$cmnt','$type')";
+                    if(mysqli_query($connect,$sql3211))
+                    {
+                      $resu = "<div class='alert alert-success' align='center' role='alert'> &nbsp;Your comment has been added</div>";
+                        echo $resu;
+                        echo "<script>window.close();</script>";
+                    }
+                    else{
+                      $resu ="<div class='alert alert-danger' align='center' role='alert'> &nbsp;Unable add comment. Please check the details and try again.</div>";
+                      echo $resu;
+                      }
+                  }
+
+
+                  ?>
                     </div>
                     <div class="col-md-4"></div>
                     <br />
@@ -68,7 +90,7 @@ $ordernumb = $_POST[txtordno1];
                 <div class="responsive-table">
 <table class="table table-striped table-bordered" width="100%" cellspacing="0">
   <?php
-     if($ordid == "")
+     if($ordernumber == "")
      {
 
      }
@@ -78,12 +100,13 @@ $ordernumb = $_POST[txtordno1];
        echo "<tr>";
        echo "<th>Date and Time</th>";
        echo "<th>Type</th>";
+       echo "<th>Order Reference</th>";
        echo "<th>Username</th>";
        echo "<th>Comments</th>";
        echo "</tr>";
        echo"<thead>";
        echo "<tbody>";
-       $tbsql="SELECT * FROM tbl_ordernotes where Nref=$ordernumb and cmmnt_type!='Network'";
+       $tbsql="SELECT * FROM tbl_ordernotes where Nref=$ordernumber and cmmnt_type!='Network'";
 
        $records =mysqli_query($connect,$tbsql);
        while($package=mysqli_fetch_assoc($records))
@@ -92,6 +115,7 @@ $ordernumb = $_POST[txtordno1];
          echo "<tr>";
          echo "<td>".$package["date"]."</td>";
          echo "<td>".$package["cmmnt_type"]."</td>";
+         echo "<td>".$package["Nref"]."</td>";
          echo "<td>".$package["Username"]."</td>";
          echo "<td>".$package["comments"]."</td>";
          echo "</tr>";
