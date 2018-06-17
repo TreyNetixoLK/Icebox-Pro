@@ -25,7 +25,7 @@ error_reporting(0);
                               <th>NIC Number</th>
                               <th>Email Address</th>
                               <th>Contact Number</th>
-                              <th>created By</th>
+                              <th>Created By</th>
                           </tr>
                       </thead>
                       <tbody>
