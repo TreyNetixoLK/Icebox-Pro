@@ -14,7 +14,13 @@ error_reporting(0);
         <div class="panel panel-default">
 
             <div class="panel-body">
+            <div class="row">
             <div class="col-md-4">
+              <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">User Profile</h3>
+    </div>
+    <div class="panel-body">
 <?php include ("app/appdata/general.php"); ?>
 	<form action="" method="post" data-parsley-validate="">
 <div class="form-group">
@@ -25,6 +31,10 @@ error_reporting(0);
       <label for="disabledSelect">Designation</label>
  	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtdesign" required="">
     </div>
+    <div class="form-group">
+      <label for="disabledSelect">Department</label>
+   	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtdesign" required="">
+      </div>
     <div class="form-group">
       <label for="disabledSelect">Email Address</label>
  	  <input type="email" id="disabledTextInput" class="form-control" placeholder="" name="txtemail" required="">
@@ -48,167 +58,244 @@ error_reporting(0);
       </select>
     </div>
   </div>
+  </div>
+  </div>
 
-<div class="col-md-2">
-    <label for="disabledSelect">Access Level</label>
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+<div class="col-md-4">
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Customer Management
-        </a>
-      </h4>
+    <div class="panel-heading">
+      <h3 class="panel-title">Access Level</h3>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Create Customer Profile</label><br />
-           <label><input type="checkbox" value="">Edit Customer Details</label><br />
-           <label><input type="checkbox" value="">Customer List</label><br />
-         </div>
+    <div class="panel-body">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Customer Management
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Create Customer Profile</label><br />
+               <label><input type="checkbox" value="">Edit Customer Details</label><br />
+               <label><input type="checkbox" value="">Customer List</label><br />
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Sales Management
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Create New Order</label><br />
+               <label><input type="checkbox" value="">Search Order</label><br />
+               <label><input type="checkbox" value="">Generate Quotes</label><br />
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+              Project Management
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Search Projects</label><br />
+               <label><input type="checkbox" value="">Manage Projects</label><br />
+               <label><input type="checkbox" value="">Pending Projects</label><br />
+               <label><input type="checkbox" value="">Project Board</label><br />
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+              Network Management
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Create New Server</label><br />
+               <label><input type="checkbox" value="">Manage Services</label><br />
+               <label><input type="checkbox" value="">Wholesale Network Status</label><br />
+               <label><input type="checkbox" value="">Search Engine Optimize</label><br />
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Development
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Create Customer Profile</label><br />
+               <label><input type="checkbox" value="">Edit Customer Details</label><br />
+               <label><input type="checkbox" value="">Customer List</label><br />
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Finance Management
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Create Customer Profile</label><br />
+               <label><input type="checkbox" value="">Edit Customer Details</label><br />
+               <label><input type="checkbox" value="">Customer List</label><br />
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Report Management
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Create Customer Profile</label><br />
+               <label><input type="checkbox" value="">Edit Customer Details</label><br />
+               <label><input type="checkbox" value="">Customer List</label><br />
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              User Management
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value="">View on Navigator</label><br />
+               <label><input type="checkbox" value="">Create Customer Profile</label><br />
+               <label><input type="checkbox" value="">Edit Customer Details</label><br />
+               <label><input type="checkbox" value="">Customer List</label><br />
+             </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Sales Management
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Create New Order</label><br />
-           <label><input type="checkbox" value="">Search Order</label><br />
-           <label><input type="checkbox" value="">Generate Quotes</label><br />
-         </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
-          Project Management
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Search Projects</label><br />
-           <label><input type="checkbox" value="">Manage Projects</label><br />
-           <label><input type="checkbox" value="">Pending Projects</label><br />
-           <label><input type="checkbox" value="">Project Board</label><br />
-         </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
-          Network Management
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Create New Server</label><br />
-           <label><input type="checkbox" value="">Manage Services</label><br />
-           <label><input type="checkbox" value="">Wholesale Network Status</label><br />
-           <label><input type="checkbox" value="">Search Engine Optimize</label><br />
-         </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Development
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Create Customer Profile</label><br />
-           <label><input type="checkbox" value="">Edit Customer Details</label><br />
-           <label><input type="checkbox" value="">Customer List</label><br />
-         </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Finance Management
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Create Customer Profile</label><br />
-           <label><input type="checkbox" value="">Edit Customer Details</label><br />
-           <label><input type="checkbox" value="">Customer List</label><br />
-         </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Report Management
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Create Customer Profile</label><br />
-           <label><input type="checkbox" value="">Edit Customer Details</label><br />
-           <label><input type="checkbox" value="">Customer List</label><br />
-         </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          User Management
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        <div class="checkbox">
-          <label><input type="checkbox" value="">View on Navigator</label><br />
-           <label><input type="checkbox" value="">Create Customer Profile</label><br />
-           <label><input type="checkbox" value="">Edit Customer Details</label><br />
-           <label><input type="checkbox" value="">Customer List</label><br />
-         </div>
-      </div>
     </div>
   </div>
 </div>
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Personal Profile</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+            <label for="disabledSelect">Identification Number</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="NIC / Passport / Driving Licence" name="txtfname" required="">
+          </div>
+      <div class="form-group">
+            <label for="disabledSelect">Home Address</label>
+       	  <input type="text" id="disabledTextInput" class="form-control" placeholder="Address Line 01" name="txtfname">
+          </div>
+          <div class="form-group">
+    <input type="text" id="disabledTextInput" class="form-control" placeholder="Address Line 02" name="txtfname">
+              </div>
+              <div class="form-group">
+        <input type="text" id="disabledTextInput" class="form-control" placeholder="Address Line 03" name="txtfname">
+                  </div>
+                  <div class="form-group">
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Address Line 04" name="txtfname">
+                      </div>
+              <div class="form-group">
+                    <label for="disabledSelect">Contact Number [Residence]</label>
+               	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtfname" required="">
+                  </div>
 
+                  <div class="form-group">
+                        <label for="disabledSelect">Contact Number [Mobile]</label>
+                   	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtfname" required="">
+                   </div>
+                   <div class="form-group">
+   <label for="exampleInputFile">Select Profile Picture</label>
+   <input type="file" id="exampleInputFile">
+   <p class="help-block" style="color:red;">Please note that the profile picute size should be 100x100</p>
+ </div>
+
+    </div>
+  </div>
 </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">System Configuration</h3>
+    </div>
+    <div class="panel-body">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="disabledSelect">WHMCS Identifier</label>
+ 	  <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtemail" required="">
+    </div>
+    <div class="form-group">
+      <label for="disabledSelect">WHMCS Secret Key</label>
+    <input type="text" id="disabledTextInput" class="form-control" placeholder="" name="txtemail" required="">
+    </div>
+  </div>
+
+  <div class="col-md-4">
+  </div>
+
+    </div>
+  </div>
+</div>
+</div>
+</form>
     <div align="center">
     <button type="submit" class="btn btn-success" name="btn_Save">Create User</button>
     </div>

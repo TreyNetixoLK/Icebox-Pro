@@ -5,8 +5,13 @@
 </nav>
 <div id="cm-menu-content">
     <div id="cm-menu-items-wrapper">
+      <div align="center"><br />
+        <img src="assets/img/pp/blank.png" height="100px" width="100px" alt="" class="img-thumbnail"> <br />
+        <strong><?php echo $fullname; ?></strong><br /><i><?php echo $desg; ?></i><br /><br />
+      </div>
         <div id="cm-menu-scroller">
             <ul class="cm-menu-items">
+              <li><a href="#" class="sf-dashboard-alt"></a></li>
                 <li><a href="main.php?page=dashboard" class="sf-dashboard-alt">Dashboard</a></li>
                 <li class="cm-submenu">
                     <a class="sf-user-male-alt">Customer Management <span class="caret"></span></a>
@@ -84,17 +89,9 @@
                 <input type="search" name="q" autocomplete="off" name="txtsearch" placeholder="Search order by Netixo Reference">
             </form>
         </div>
-        <div class="pull-right">
-            <div id="cm-search-btn" class="btn btn-midnight md-search-white" data-toggle="cm-search"></div>
-        </div>
-
         <div class="dropdown pull-right">
             <button class="btn btn-midnight md-account-circle-white" data-toggle="dropdown"></button>
             <ul class="dropdown-menu">
-                <li class="disabled text-center">
-                    <a style="cursor:default;"><strong><?php echo $fullname; ?></strong><br /><i><?php echo $desg; ?></i></a>
-                </li>
-                <li class="divider"></li>
                 <li>
                     <a href="main.php?page=changepw"><i class="fa fa-fw fa-key"></i> Change Password</a>
                 </li>
