@@ -8,7 +8,10 @@ if(isset ($_POST['btn_Login']))
 {
 	if (empty($_POST['txtusername']) || empty($_POST['txtpassword']) )
 	{
-		$msg= "Please enter valid user credentials";
+		$msg= "<div class='alert alert-warning alert-dismissible fade in shadowed' role='alert'>
+			 <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+			 <i class='fa fa-fw fa-info-circle'></i> <strong>Hmmm!</strong> You need to enter your username and password to login.
+		</div>";
 
 	}
 	else
@@ -26,7 +29,12 @@ if(isset ($_POST['btn_Login']))
 		else
 		{
 		  	   sessionlogfail($con,$user,$msg);
-		  	   $msg = "Incorrect Username or Password";
+		  	   $msg = "<div class='alert alert-danger alert-dismissible fade in shadowed' role='alert'>
+					 		<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+					 		<i class='fa fa-fw fa-info-circle'></i> <strong>OOPS!</strong> It looks like the username or password you have entered is incorrect.
+					 </div>";
+
+
 
 		}
 

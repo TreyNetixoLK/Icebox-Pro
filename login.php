@@ -33,12 +33,15 @@
 	    </div>
           </div>
         </div>
-	<div class="col-xs-6">
-          <div class="checkbox"><label><input type="checkbox"> Remember me</label></div>
-	</div><div class="col-xs-6">
+        <div align="center">
+        <div style="width:200px;">
           <button type="submit" class="btn btn-block btn-primary" name="btn_Login">Sign in</button>
         </div>
       </form>
+      <br /><br />
+        <?php echo $msg; ?>
+      </div>
     </div>
+
   </body>
 </html>
