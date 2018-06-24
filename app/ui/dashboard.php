@@ -277,38 +277,17 @@ echo "</div>";
                <!-- /.row -->
 
          <div class="row">
-      <!--      <div class="col-lg-12">
+            <div class="col-lg-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn"> Current Outages</h3>
+                        <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn"> Forum</h3>
                     </div>
                     <div class="panel-body">
-                      <?php
+                    
 
-
-//$tbsql879="SELECT * FROM tbl_orders where Status = 'Progressing'";
-
-//$records =mysqli_query($connect,$tbsql879);
-//while($package=mysqli_fetch_assoc($records))
-{
-//echo "<div class='panel panel-primary'>";
-//echo "<div class='panel-body'>";
-//echo "<h4 align='center'><b>#N".$package["OrderID"]."&nbsp-&nbsp".$package["CustName"]."</b></h4>";
-//echo "<p><b>Assigned Engineer :&nbsp</b>".$package["ProjectEngineer"]."</p>";
-//echo "<p><b>ETA :&nbsp</b>".$package["ETA"]."</p>";
-//echo "</div>";
-//echo "</div>";
-} // end While loop
-
-?>
-                       <div class="list-group">
-
-
-
-        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
           </div>
 

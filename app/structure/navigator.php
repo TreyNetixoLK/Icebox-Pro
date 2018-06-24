@@ -75,8 +75,8 @@
                         <li><a href="main.php?page=reset_pw">Reset Password</a></li>
                     </ul>
                 </li>
-            </ul>
 
+            </ul>\
         </div>
     </div>
 </div>
