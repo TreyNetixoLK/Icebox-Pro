@@ -41,6 +41,7 @@
                 <li class="cm-submenu">
                     <a class="sf-database">Network Management <span class="caret"></span></a>
                     <ul>
+                        <li><a href="main.php?page=netwdashboard">Dashboard</a></li>
                         <li><a href="main.php?page=serverstatus">Create a new Server</a></li>
                         <li><a href="main.php?page=manageservers">Manage Services</a></li>
                         <li><a href="main.php?page=whole_netstat">Wholesale Network Status</a></li>
