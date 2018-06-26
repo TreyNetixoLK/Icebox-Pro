@@ -13,7 +13,10 @@ error_reporting(0); ?>
 
             <div class="panel-body">
               <?php include ("app/appdata/general.php"); ?>
-              <div class="col-md-4">
+              <div class="row">
+              <h3 align="center"> All  Pending Orders</h3>
+              <div class="col-md-3">
+              <br /><br />
               <form action="" method="post" data-parsley-validate="">
  	<div class="form-group">
       <label for="disabledSelect">Netixo Reference</label>
@@ -75,8 +78,7 @@ if(isset ($_POST['btn_Save']))
 }
 ?>
 </div>
-<div class="col-md-8">
-<h3 align="center"> All  Pending Orders</h3>
+<div class="col-md-9">
 <br />
 <table class="table table-striped">
  <thead>
@@ -110,6 +112,7 @@ if(isset ($_POST['btn_Save']))
 	  ?>
   </tbody>
 </table>
+</div>
 </div>
 
             </div>
