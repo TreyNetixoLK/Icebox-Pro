@@ -5,10 +5,6 @@
 </nav>
 <div id="cm-menu-content">
     <div id="cm-menu-items-wrapper">
-      <div align="center"><br />
-        <img src="assets/img/pp/blank.png" height="100px" width="100px" alt="" class="img-thumbnail"> <br />
-        <strong><?php echo $fullname; ?></strong><br /><i><?php echo $desg; ?></i><br /><br />
-      </div>
         <div id="cm-menu-scroller">
             <ul class="cm-menu-items">
               <li><a href="#" class="sf-dashboard-alt"></a></li>
@@ -93,6 +89,14 @@
         <div class="dropdown pull-right">
             <button class="btn btn-midnight md-account-circle-white" data-toggle="dropdown"></button>
             <ul class="dropdown-menu">
+              <li>
+                <div align="center">
+                  <img src="assets/img/pp/blank.png" height="70px" width="70px" alt="" class="img-thumbnail"> <br />
+                  <div style="color:black;">
+                  <strong><?php echo $fullname; ?></strong><br /><i><?php echo $desg; ?></i><br /></div>
+                </div>
+              </li>
+              <li class="divider"></li>
                 <li>
                     <a href="main.php?page=changepw"><i class="fa fa-fw fa-key"></i> Change Password</a>
                 </li>
