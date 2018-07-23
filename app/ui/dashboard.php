@@ -200,7 +200,7 @@ $sql3="SELECT COUNT(Status) FROM tbl_orders WHERE Ord_Rec_Date='$date;'";
                    <div class="col-lg-4">
                        <div class="panel panel-default">
                            <div class="panel-heading">
-                               <h3 class="panel-title">  <img src="assets/img/sf/folder.svg" alt="folder"> Pending Projects</h3>
+                               <h3 class="panel-title">  <img src="assets/img/sf/folder.svg" alt="folder"> Ongoing Projects</h3>
                            </div>
                            <div class="panel-body">
                              <?php
@@ -233,7 +233,7 @@ echo "</div>";
                    <div class="col-lg-8">
                        <div class="panel panel-default">
                            <div class="panel-heading">
-                               <h3 class="panel-title"><img src="assets/img/sf/layers.svg" alt="layers"> Pending Projects</h3>
+                               <h3 class="panel-title"><img src="assets/img/sf/layers.svg" alt="layers"> New Projects</h3>
                            </div>
                            <div class="panel-body">
                                <div class="table-responsive">
@@ -275,21 +275,6 @@ echo "</div>";
                    </div>
                </div>
                <!-- /.row -->
-
-         <div class="row">
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">  <img src="assets/img/sf/bullhorn.svg" alt="bullhorn"> Forum</h3>
-                    </div>
-                    <div class="panel-body">
-
-
-                    </div>
-                </div>
-            </div>
-
-          </div>
 
            </div>
            <!-- /.container-fluid -->

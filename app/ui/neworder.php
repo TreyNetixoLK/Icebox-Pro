@@ -108,6 +108,7 @@ error_reporting(0);
   <option>Dynamic Web Site</option>
   <option>Static Web Site</option>
   <option>Mobile Application</option>
+  <option>E Commerce Website</option>
   <option>Web Application</option>
   <option>Windows Application</option>
   <option>Telco Solution</option>

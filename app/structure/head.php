@@ -12,6 +12,10 @@
 
         <title>ICEBOX Pro</title>
 
+        <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
+
     </head>
 
     <body class="cm-no-transition cm-1-navbar">

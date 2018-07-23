@@ -266,7 +266,7 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
                   </tr>
                   <tr>
                     <td><strong>Plan Name</strong></td>
-                    <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"><?php echo $plan; ?></button></td>
+                    <td><?php echo $plan; ?></td>
                     <td><strong>Contract Term</strong></td>
                     <td><?php echo $cterm; ?></td>
                   </tr>
@@ -434,25 +434,6 @@ ol.progress-track li.progress-todo .icon-wrap .icon-down-arrow {
               <br/ >
               <div class="col-md-12">
                 <!-- Add Notes Section -->
-                <div class="col-md-12">
-                  <h3><b>Credits & Approvals</b></h3>
-                        <br />
-                        <div class="responsive-table">
-        <table class="table table-striped table-bordered" width="100%" cellspacing="0">
-        <thead>
-        <tr>
-        <th>Date and Time</th>
-        <th>Requested By</th>
-        <th>Remarks</th>
-        <th>Status</th>
-        <th>Approved By</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      </div>
-                </div>
 
                 <!-- End of Add Notes Section -->
                 <div class="row">

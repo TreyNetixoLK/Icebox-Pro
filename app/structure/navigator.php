@@ -22,6 +22,7 @@
                     <ul>
                         <li><a href="main.php?page=neworder">Create a new Order</a></li>
                         <li><a href="main.php?page=search">Search Order</a></li>
+                        <li><a href="main.php?page=manageorder">Manage Order</a></li>
                         <li><a href="main.php?page=createquote">Generate Quotation</a></li>
                     </ul>
                 </li>
@@ -37,11 +38,13 @@
                 <li class="cm-submenu">
                     <a class="sf-database">Network Management <span class="caret"></span></a>
                     <ul>
-                        <li><a href="main.php?page=netwdashboard">Dashboard</a></li>
+                      <!--  <li><a href="main.php?page=netwdashboard">Dashboard</a></li> -->
                         <li><a href="main.php?page=serverstatus">Create a new Server</a></li>
                         <li><a href="main.php?page=manageservers">Manage Services</a></li>
-                        <li><a href="main.php?page=whole_netstat">Wholesale Network Status</a></li>
+                        <li><a href="main.php?page=whole_netstat">Server Monitor</a></li>
                         <li><a href="https://akismet.com/account/" target="_blank">Search Engine Optimize</a></li>
+                        <li><a href="https://tickets.cpanel.net/review/login.cgi?loggedout=1" target="_blank">Cpanel Support Portal</a></li>
+                        <li><a href="https://support.plesk.com/access/unauthenticated?brand_id=848585&return_to=https%3A%2F%2Fplesk.zendesk.com%2F" target="_blank">Plesk Support Portal</a></li>
                     </ul>
                 </li>
                 <li class="cm-submenu">
