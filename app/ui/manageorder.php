@@ -91,7 +91,7 @@ error_reporting(0);
 
               <div class="form-group">
                  <label for="disabledTextInput">Customer Requirement</label>
-                 <textarea class="form-control" rows="4" name="txtcomments" data-length="800" placeholder=""><?php echo $comments; ?></textarea>
+                 <textarea class="form-control" rows="4" name="txtrequirement" data-length="800" placeholder=""><?php echo $comments; ?></textarea>
                </div>
 
                <div class="form-group">
@@ -143,27 +143,20 @@ if(isset ($_POST['btn_Update']))
 {
 
 $search2 =$_POST['txtordNo'];
-$repo= $_POST['txtgiturl'];
-$status= $_POST['txtstatus'];
-$appraisal = $_POST['appraisal'];
-$ui = $_POST['uidesign'];
-$db = $_POST['dbdesign'];
-$devop = $_POST['development'];
-$testing = $_POST['testing'];
-$completed = $_POST['completed'];
-$etadate = $_POST['txteta'];
+$requirement =$_POST['txtrequirement'];
+$Breg=$_POST['txtbreg'];
+$Contactname = $_POST['txtcontactperson'];
+$Cemail = $_POST['txtemail'];
+$Cnumber = $_POST['txtnumber'];
+
 
 $resu = "";
 
-	$sql77 = "update tbl_orders set gitrepo ='$repo',
-	 appraisal='$appraisal',
-   ui_design='$ui',
-   db_design='$db',
-   development='$devop',
-   testing='$testing',
-   completion='$completed',
-   ETA = '$etadate',
-	Status='$status' WHERE OrderID='$search2'";
+	$sql77 = "update tbl_orders set Comments ='$requirement',
+	 BusinessReg='$Breg',
+   SiteContact='$Contactname',
+   Email='$Cemail',
+   ContactNo='$Cnumber' WHERE OrderID='$search2'";
 
     if (mysqli_query($connect,$sql77))
 	{
@@ -228,7 +221,7 @@ $resu = "";
      echo "</tr>";
      echo"<thead>";
      echo "<tbody>";
-     $tbsql78="SELECT * FROM tbl_quotes where Nref=$ordid";
+     $tbsql78="SELECT * FROM tbl_quotes where order_ref=$ordid";
 
      $records =mysqli_query($connect,$tbsql78);
      while($package=mysqli_fetch_assoc($records))
@@ -240,7 +233,7 @@ $resu = "";
        echo "<td>".$package["date_approved"]."</td>";
        echo "<td>".$package["approved_by"]."</td>";
        echo "<td>".$package["quote_value"]."</td>";
-       echo "<td>".$package["quote_document"]."</td>";
+       echo "<td><img src='assets/img/sf/file-pdf.svg' alt='folder'>&nbsp;".$package["quote_document"]."</td>";
        echo "</tr>";
 
 

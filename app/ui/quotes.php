@@ -23,7 +23,7 @@ $ordernumber = $_POST[txtordno1];
                     <br />
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                      <form method="post" action="">
+                      <form method="post" enctype="multipart/form-data">
                       <div class="form-group">
                          <input type="text" id="disabledTextInput" class="form-control" width="50" name="txtordernum" value="<?php echo $ordernumber; ?>" readonly>
                        </div>
@@ -33,11 +33,11 @@ $ordernumber = $_POST[txtordno1];
                         </div>
                         <div class="form-group">
                            <label for="disabledTextInput">Date Approved</label>
-                           <input type="date" id="disabledTextInput" class="form-control" width="50" name="txtissueddate" value="">
+                           <input type="date" id="disabledTextInput" class="form-control" width="50" name="txtapproveddate" value="">
                          </div>
                          <div class="form-group">
                             <label for="disabledTextInput">Approved By</label>
-                            <input type="text" id="disabledTextInput" class="form-control" width="50" name="txtissueddate" value="">
+                            <input type="text" id="disabledTextInput" class="form-control" width="50" name="txtapprovedby" value="">
                           </div>
                           <div class="form-group">
                              <label for="disabledTextInput">Quote Value</label>
@@ -46,32 +46,38 @@ $ordernumber = $_POST[txtordno1];
                        <div class="form-group">
                           <label for="disabledTextInput">Attach Quote</label>
                           <br /><br />
-                          <input type="file" id="exampleInputFile">
-                          <p class="help-block">Please only attach one PDF file.</p>
+                          <input type="file" id="uploadquote" name="quotedoc">
+                          <p class="help-block" style="color:blue;">Please only attach one PDF file.</p>
                         </div><br />
-                    <button type="submit" class="btn btn-primary btn-lg" name="btn_save">Upload File</button>
+                    <button type="submit" class="btn btn-primary btn-lg" name="btn_save">Upload and Save</button>
                   </form>
                   <br />
                   <?php
-                  $order = $_POST['txtordernum'];
-                  $type = $_POST['txtordtype'];
-                  $cmnt = $_POST['txtcomments'];
-                  $val = $_SESSION ['user'];
-
-                  $resu = "";
-                  $resu1="";
 
                   if(isset ($_POST['btn_save']))
                   {
-                    $sql3211 = "INSERT INTO tbl_ordernotes (Nref,Username,comments,cmmnt_type) VALUES ('$order','$val','$cmnt','$type')";
-                    if(mysqli_query($connect,$sql3211))
+                    $target = "quotes/".basename($_FILES['quotedoc']['name']);
+                    $file = $_FILES['quotedoc']['name'];
+                    $order = $_POST['txtordernum'];
+                    $idate = $_POST['txtissueddate'];
+                    $adate = $_POST['txtapproveddate'];
+                    $appby = $_POST['txtapprovedby'];
+                    $price = $_POST['txtvalue'];
+                    $val = $_SESSION ['user'];
+                    $resu = "";
+
+                    $sql321 = "INSERT INTO tbl_quotes (created_by,order_ref,issued_date,date_approved,approved_by,quote_value,quote_document) VALUES ('$val','$order','$idate','$adate','$appby','$price','quotes/$file')";
+                    mysqli_query($connect,$sql321);
+                    if(move_uploaded_file($_FILES['quotedoc']['tmp_name'], $target))
                     {
-                      $resu = "<div class='alert alert-success' align='center' role='alert'> &nbsp;Your comment has been added</div>";
+                      $resu = "<div class='alert alert-success' align='center' role='alert'> &nbsp;Quote has been attached to the order.</div>";
                         echo $resu;
+
+
                         echo "<script>window.close();</script>";
                     }
                     else{
-                      $resu ="<div class='alert alert-danger' align='center' role='alert'> &nbsp;Unable add comment. Please check the details and try again.</div>";
+                      $resu ="<div class='alert alert-danger' align='center' role='alert'> &nbsp;Unable to upload the file due to an error. Please try again.</div>";
                       echo $resu;
                       }
                   }

@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/roboto.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <title>ICEBOX Pro | Login</title>
-    <style></style>
+    <!-- favicons
+================================================== -->
+<link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
   </head>
   <body class="cm-login">
 
