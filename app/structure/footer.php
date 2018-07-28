@@ -23,6 +23,7 @@
 <script src="assets/js/demo/popovers-tooltips.js"></script>
 <script src="assets/js/parsley.min.js"></script>
 <script src="assets/js/demo/home.js"></script>
+<script src="assets/js/upload.js"></script>
 
 </body>
 </html>

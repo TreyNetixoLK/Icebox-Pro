@@ -65,6 +65,8 @@
                     <a class="sf-monitor">Report Management <span class="caret"></span></a>
                     <ul>
                         <li><a href="main.php?page=rep_allact_serv">Configuration Report</a></li>
+                        <li><a href="main.php?page=rep_monthly_income">Total Income Report</a></li>
+                        <li><a href="main.php?page=rep_agent_sales">Agent Sales Report</a></li>
 
                     </ul>
                 </li>
