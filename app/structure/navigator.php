@@ -18,9 +18,9 @@
                     </ul>
                 </li>
                 <li class="cm-submenu">
-                    <a class="sf-bag">Sales Management <span class="caret"></span></a>
+                    <a class="sf-bag">Order Management <span class="caret"></span></a>
                     <ul>
-                        <li><a href="main.php?page=neworder">Create a new Order</a></li>
+                        <li><a href="main.php?page=neworder">Create New Order</a></li>
                         <li><a href="main.php?page=search">Search Order</a></li>
                         <li><a href="main.php?page=manageorder">Manage Order</a></li>
                         <li><a href="main.php?page=createquote">Generate Quotation</a></li>
@@ -39,7 +39,7 @@
                     <a class="sf-database">Network Management <span class="caret"></span></a>
                     <ul>
                       <!--  <li><a href="main.php?page=netwdashboard">Dashboard</a></li> -->
-                        <li><a href="main.php?page=serverstatus">Create a new Server</a></li>
+                        <li><a href="main.php?page=serverstatus">Create New Server</a></li>
                         <li><a href="main.php?page=manageservers">Manage Services</a></li>
                         <li><a href="main.php?page=whole_netstat">Server Monitor</a></li>
                         <li><a href="https://akismet.com/account/" target="_blank">Search Engine Optimize</a></li>
@@ -50,7 +50,7 @@
                 <li class="cm-submenu">
                     <a class="sf-terminal">Development <span class="caret"></span></a>
                     <ul>
-                        <li><a href="https://devops.netixo.lk/mantis/login_page.php" target="_blank">Mantis BT</a></li>
+                        <li><a href="http://devops.netixo.lk/zentao/www/index.php?m=user&f=login" target="_blank">ZenTao PMS</a></li>
                     </ul>
                 </li>
                 <li class="cm-submenu">
