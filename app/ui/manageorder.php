@@ -217,7 +217,7 @@ $resu = "";
      echo "<th>Date Approved</th>";
      echo "<th>Approved By</th>";
      echo "<th>Quote Value</th>";
-     echo "<th></th>";
+     echo "<th>Quote Document</th>";
      echo "</tr>";
      echo"<thead>";
      echo "<tbody>";
@@ -233,9 +233,8 @@ $resu = "";
        echo "<td>".$package["date_approved"]."</td>";
        echo "<td>".$package["approved_by"]."</td>";
        echo "<td>".$package["quote_value"]."</td>";
-       echo "<td><img src='assets/img/sf/file-pdf.svg' alt='folder'>&nbsp;".$package["quote_document"]."</td>";
+       echo "<td>"?><a href="<?php echo $package["quote_document"]; ?>" target="_blank"><img src="assets/img/sf/file-pdf.svg" alt="folder">&nbsp;View Quote</a><?php echo "</td>";
        echo "</tr>";
-
 
          } // end While loop
    }

@@ -1,17 +1,17 @@
 <?php include ("app/appdata/connection.php"); ?>
 <?php
 //Turn off all error reporting
-error_reporting(0);
+//error_reporting(0);
 
 $ordernumber = $_POST[txtordno1];
 ?>
                         <style>
 
 .center{
-text-align:center;  
+text-align:center;
 }
 #top{
-margin-top:20px;  
+margin-top:20px;
 }
 .btn-container{
 background:#fff;
@@ -34,7 +34,7 @@ h4>strong{
 color:#ff3f3f
 }
 
-/*this sets the actual file input to overlay our button*/ 
+/*this sets the actual file input to overlay our button*/
 #fileup{
 opacity: 1;
 -moz-opacity: 0;
@@ -67,7 +67,7 @@ height: 30px;
                     <br />
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
-                      <form method="post" enctype="multipart/form-data">
+                      <form method="post" action="" enctype="multipart/form-data">
                       <div class="form-group">
                          <input type="text" id="disabledTextInput" class="form-control" width="50" name="txtordernum" value="<?php echo $ordernumber; ?>" readonly>
                        </div>
@@ -91,7 +91,7 @@ height: 30px;
                            </div>
                         </div>
                         <div class="col-md-8">
-                    
+
                          <div class="form-group">
 
                    <!-- File Upload -->
@@ -103,16 +103,16 @@ height: 30px;
           <!--this field changes dinamically displaying the filename we are trying to upload-->
           <p id="namefile"><i>Please upload only one .pdf document</i></p>
           <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
-          <input type="file" value="" name="fileup" id="fileup">
+          <input type="file" value="" name="quotedoc" id="fileup">
           <br />
         </div>
       <!--additional fields-->
                    <!-- End of File Upload -->
-                       
+
                         </div><br />
                         </div>
                       </div>
-                      
+
                     <button type="submit" class="btn btn-primary btn-lg" name="btn_save">Upload and Save</button>
                   </form>
                   <br />
